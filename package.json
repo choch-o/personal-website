@@ -2,7 +2,7 @@
   "name": "chocho-personal",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://choch-o.github.io",
+  "homepage": "https://choch-o.github.io",
   "devDependencies": {
     "gh-pages": "^2.0.1",
     "react-scripts": "2.1.5"
