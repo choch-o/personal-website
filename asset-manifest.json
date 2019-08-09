@@ -1,12 +1,12 @@
 {
-  "main.js": "/static/js/main.cce55dc7.chunk.js",
-  "main.js.map": "/static/js/main.cce55dc7.chunk.js.map",
+  "main.js": "/static/js/main.a8feceac.chunk.js",
+  "main.js.map": "/static/js/main.a8feceac.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.fdfcfda2.js",
   "runtime~main.js.map": "/static/js/runtime~main.fdfcfda2.js.map",
-  "static/js/2.a6c46f00.chunk.js": "/static/js/2.a6c46f00.chunk.js",
-  "static/js/2.a6c46f00.chunk.js.map": "/static/js/2.a6c46f00.chunk.js.map",
+  "static/js/2.587a8631.chunk.js": "/static/js/2.587a8631.chunk.js",
+  "static/js/2.587a8631.chunk.js.map": "/static/js/2.587a8631.chunk.js.map",
   "index.html": "/index.html",
-  "precache-manifest.d2ec52f0ed3541578896b5869f3f1ec8.js": "/precache-manifest.d2ec52f0ed3541578896b5869f3f1ec8.js",
+  "precache-manifest.2b0698b57ad38de6214237897884a55b.js": "/precache-manifest.2b0698b57ad38de6214237897884a55b.js",
   "service-worker.js": "/service-worker.js",
   "static/media/profile_donut.jpeg": "/static/media/profile_donut.866ee213.jpeg"
 }
