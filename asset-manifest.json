@@ -1,12 +1,11 @@
 {
-  "main.js": "/static/js/main.3c532699.chunk.js",
-  "main.js.map": "/static/js/main.3c532699.chunk.js.map",
+  "main.js": "/static/js/main.53d5345e.chunk.js",
+  "main.js.map": "/static/js/main.53d5345e.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.fdfcfda2.js",
   "runtime~main.js.map": "/static/js/runtime~main.fdfcfda2.js.map",
-  "static/js/2.56c1e71a.chunk.js": "/static/js/2.56c1e71a.chunk.js",
-  "static/js/2.56c1e71a.chunk.js.map": "/static/js/2.56c1e71a.chunk.js.map",
+  "static/js/2.480805d3.chunk.js": "/static/js/2.480805d3.chunk.js",
+  "static/js/2.480805d3.chunk.js.map": "/static/js/2.480805d3.chunk.js.map",
   "index.html": "/index.html",
-  "precache-manifest.859c355cbd226d4de291c1b839e76e7f.js": "/precache-manifest.859c355cbd226d4de291c1b839e76e7f.js",
-  "service-worker.js": "/service-worker.js",
-  "static/media/happy_patrick.jpg": "/static/media/happy_patrick.fde3bf9e.jpg"
+  "precache-manifest.97e320c9cf7bed5c1504817bff6cace8.js": "/precache-manifest.97e320c9cf7bed5c1504817bff6cace8.js",
+  "service-worker.js": "/service-worker.js"
 }
