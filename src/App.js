@@ -1,7 +1,7 @@
 import { hot } from 'react-hot-loader/root';
 import React, { Component } from 'react';
 import { Box, Button, Collapsible, Heading, Grommet, Layer, ResponsiveContext,
-  Image, Paragraph, Markdown } from 'grommet';
+  Image, Paragraph, Markdown, Text } from 'grommet';
 import { FormClose, Notification } from 'grommet-icons';
 
 import profile from './img/profile_donut.jpeg';
@@ -10,7 +10,7 @@ const theme = {
   global: {
     colors: {
       brand: '#DFA9DA',
-      lavender: '#E6D9FE',
+      lavender: '#EFEEFE',
       heavy: '#000000',
     },
     font: {
@@ -116,12 +116,19 @@ class App extends Component {
                       mobile and ubiquiotus computing.
                     </Paragraph>
                   </Box>
-                {/*<Box pad="large" direction="column" background="lavender">*/}
+                <Box pad="large" direction="column" background="lavender">
+                  <Heading level="3">Latest News & Travels</Heading>
+                  <Markdown>
+                    **Aug 27 - Sep 1, 2019** Attending Google Women Techmakers Scholars Retreat in Sydney, Australia!
+                  </Markdown>
+                  <Markdown>
+                    **Aug 8, 2019** Presenting my recent work at HCI@KAIST Summer Workshop 2019
+                  </Markdown>
                   {/*<Heading>Publications</Heading>*/}
                   {/*<Paragraph margin="small">*/}
                     {/*Knocker: Vibroacoustic-based Object Recognition with Smartphones (UbiComp '19)*/}
                   {/*</Paragraph>*/}
-                {/*</Box>*/}
+                </Box>
               </Box>
             </Box>
           )}
