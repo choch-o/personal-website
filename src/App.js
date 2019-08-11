@@ -198,7 +198,7 @@ class App extends Component {
                 <Box fill="horizontal" align="center" alignContent="center" pad='large' direction='row' flex overflow={{ horizontal: 'hidden' }}>
                   <Box height="medium" width="medium">
                     <Image
-                      fit="contain"
+                      fit="cover"
                       margin="medium"
                       src={profile}
                     />
