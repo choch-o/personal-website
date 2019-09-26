@@ -5,7 +5,7 @@ import { Box, Button, Collapsible, Heading, Grommet, Layer, ResponsiveContext,
 import { FormClose, Notification, DocumentPdf, Mail, Github, Book} from 'grommet-icons';
 
 import profile from './res/img/profile_donut.jpeg';
-import cv from './res/cv_190811.pdf';
+import cv from './res/cv_190926.pdf';
 
 const theme = {
   global: {
@@ -81,6 +81,10 @@ const PubItem = (props) => (
 
 let newsData = {
   "news": [
+    {
+      "date": "Sep 2, 2019",
+      "text": "Won the Best TA Award of KAIST SoC for my effort on _CS341: Intro to Networking_ course in 2019 Spring semester",
+    },
     {
       "date": "Aug 27 - Sep 1, 2019",
       "text": "Attending the Google WTM Scholars Retreat in Sydney, Australia!",
