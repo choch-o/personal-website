@@ -1,11 +1,16 @@
 import { hot } from 'react-hot-loader/root';
 import React, { Component } from 'react';
-import { Box, Button, Collapsible, Heading, Grommet, Layer, ResponsiveContext,
-  Image, Paragraph, Markdown, Text, Grid } from 'grommet';
-import { FormClose, Notification, DocumentPdf, Mail, Github, Book} from 'grommet-icons';
+import { Box, Button, Collapsible, Menu, Heading, Grommet, Layer, ResponsiveContext,
+  Image, Paragraph, Markdown, Text, Grid, ThemeContext, Anchor } from 'grommet';
+import { FormClose, Notification, DocumentPdf, Mail, Github, Book, Home, Video, Trophy, Multimedia, PlayFill, Play, Document} from 'grommet-icons';
 
-import profile from './res/img/profile_donut.jpeg';
-import cv from './res/cv_190926.pdf';
+import { newsData } from './NewsData';
+import { paperData, posterData } from './PubData';
+import { projectData } from './ProjectData';
+
+const profile = '/img/profile_jeju_green.JPG';
+const placeholder ='/img/happy_patrick.jpg';
+const cv = 'pdf/cv_190926.pdf';
 
 const theme = {
   global: {
@@ -30,15 +35,43 @@ const headerStyle = {
   fontFamily: 'Permanent Marker',
 };
 
+const pubTitleStyle = {
+  textDecoration: 'none',
+  color: '#000000',
+};
+
+const badgeTheme = {
+  global: {
+    edgeSize: {
+      small: "5px"
+    }
+  },
+  button: {
+    border: {
+      radius: "18px",
+    },
+    padding: {
+      horizontal: "10px",
+      vertical: "2px",
+    }
+  },
+  text: {
+    medium: {
+      size: "12px"
+    }
+
+  }};
+
 const AppBar = (props) => (
   <Box
     tag='header'
     direction='row'
     align='center'
     justify='between'
-    pad={{ left: 'medium', right: 'small', vertical: 'small' }}
+    pad={{ horizontal: 'large' }}
     // elevation='small'
     style={{ zIndex: '1' }}
+    flex={false}
     {...props}
   />
 );
@@ -65,7 +98,15 @@ const PubItem = (props) => (
     <Text color="darklavender" margin={{"right": "small",}}>✦</Text>
     <Box direction="column">
       <Text size="medium">
-        <b>{props.title}</b>
+        <b>
+          {props.paper_link == null ?
+            props.title :
+            <Button href={props.paper_link} plain="true" hoverIndicator={{color: "lavender", opacity: "strong",}}
+                    style={pubTitleStyle}>
+              {props.title}
+            </Button>
+          }
+        </b>
       </Text>
       <Text size="small">
         <Markdown>
@@ -75,107 +116,145 @@ const PubItem = (props) => (
       <Text size="small">
         <i>{props.venue}</i>
       </Text>
+      <Box
+        direction="row"
+      >
+        <ThemeContext.Extend value={badgeTheme}>
+          {props.website != null &&
+            <div>
+              <Button
+                theme={badgeTheme}
+                icon={<Home size="small"/>}
+                label={<Text size="small">Website</Text>}
+                href={props.website}
+                a11yTitle="website"
+                margin={{
+                  "top": "xsmall",
+                  "right": "xsmall",}}
+              />
+            </div>
+          }
+          {props.video != null &&
+            <div>
+              <Button
+                icon={<Video size="small"/>}
+                label={<Text size="small">Video</Text>}
+                href={props.video}
+                a11yTitle="video"
+                margin={{
+                  "top": "xsmall",
+                  "right": "xsmall",}}
+              />
+            </div>
+          }
+          {props.award != null &&
+            <div>
+              <Button
+                primary="true"
+                color="accent-1"
+                icon={<Trophy size="small"/>}
+                label={<Text size="small">{props.award}</Text>}
+                a11yTitle={props.award}
+                margin={{
+                  "top": "xsmall",
+                  "right": "xsmall",}}
+              />
+            </div>
+          }
+        </ThemeContext.Extend>
+      </Box>
     </Box>
   </Box>
 );
 
-let newsData = {
-  "news": [
-    {
-      "date": "Sep 2, 2019",
-      "text": "Won the Best TA Award of KAIST SoC for my effort on _CS341: Intro to Networking_ course in 2019 Spring semester",
-    },
-    {
-      "date": "Aug 27 - Sep 1, 2019",
-      "text": "Attending the Google WTM Scholars Retreat in Sydney, Australia!",
-    },
-    {
-      "date": "Aug 8, 2019",
-      "text": "Presenting my ongoing work on sender-controlled mobile instant message notifications at HCI@KAIST Summer Workshop",
-    },
-    {
-      "date": "Jul 11, 2019",
-      "text": "Selected as a scholarship recipient of the 2019 Google Women Techmakers (WTM) Scholars Program"
-    },
-    {
-      "date": "Jul 5, 2019",
-      "text": "Our paper _Knocker: Vibroacoustic-based Object Recognition with Smartphones_ " +
-      "is accepted at ACM IMWUT (UbiComp) '19."
-    }
-  ],
-};
-
-let paperData = {
-  "papers": [
-    {
-      "title": "Knocker:  Vibroacoustic-based Object Recognition with Smartphones",
-      "venue": "ACM IMWUT (UbiComp) 2019",
-      "authors": "Taesik Gong, **Hyunsung Cho**, Bowon Lee, and Sung-Ju Lee",
-      "paper_link": null,
-      "slides": null,
-      "award": null,
-      "video": null,
-      "website": null,
-    },
-    {
-      "title": "Intelligent Positive Computing with Mobile,  Wearable,  and IoT Devices: Literature Review and Research Directions",
-      "venue": "Ad Hoc Networks 2019",
-      "authors": "Uichin Lee, Kyungsik Han, **Hyunsung Cho**, Kyong-Mee Chung, Hwajung Hong, Sung-Ju Lee, Youngtae Noh,Sooyoung Park,  and John M. Caroll.",
-      "paper_link": null,
-      "slides": null,
-      "award": null,
-      "video": null,
-      "website": null,
-    },
-
-
-    // {
-    //   "title": "",
-    //   "venue": "",
-    //   "authors": "",
-    //   "paper_link": null,
-    //   "slides": null,
-    //   "award": false,
-    //   "video": null,
-    //   "website": null,
-    // },
-  ],
-};
-
-let posterData = {
-  "posters": [
-    {
-      "title": "Sender-Controlled Mobile Instant Message Notifications  Using  Activity  Information",
-      "venue": "ACM MobiSys '19 Demos",
-      "authors": "**Hyunsung Cho**, Jinyoung Oh, Juho Kim, and Sung-Ju Lee",
-      "paper_link": null,
-      "slides": null,
-      "award": null,
-      "video": null,
-      "website": null,
-    },
-    {
-      "title": "Real-Time Object Identification with a Smartphone Knock",
-      "venue": "ACM MobiSys '19 Videos",
-      "authors": "Taesik Gong, **Hyunsung Cho**, Bowon Lee, and Sung-Ju Lee",
-      "paper_link": null,
-      "slides": null,
-      "award": "Best Video Award",
-      "video": null,
-      "website": null,
-    },
-    {
-      "title": "Identifying Everyday Objects with a Smartphone Knock",
-      "venue": "ACM CHI '18 Late-Breaking Work",
-      "authors": "Taesik Gong, **Hyunsung Cho**, Bowon Lee, and Sung-Ju Lee",
-      "paper_link": null,
-      "slides": null,
-      "award": null,
-      "video": null,
-      "website": null,
-    },
-  ],
-};
+const ProjectItem = (props) => (
+  <Box margin="small" pad="medium" background="white" elevation="xsmall" orientation="column">
+    <Box height="small" width="fill">
+      <Image
+        fit="cover"
+        src={placeholder}
+      />
+    </Box>
+    <Heading level="2">{props.title}</Heading>
+    <Text>Project description</Text>
+    <Box
+      margin={{"top": "small"}}
+      direction="row"
+    >
+      <ThemeContext.Extend value={badgeTheme}>
+        {props.paper_link != null &&
+          <div>
+            <Button
+              theme={badgeTheme}
+              icon={<Document size="small"/>}
+              label={<Text size="small">Paper</Text>}
+              href={props.paper_link}
+              a11yTitle="paper"
+              margin={{
+                "top": "xsmall",
+                "right": "xsmall",}}
+            />
+          </div>
+        }
+        {props.website != null &&
+          <div>
+            <Button
+              theme={badgeTheme}
+              icon={<Home size="small"/>}
+              label={<Text size="small">Website</Text>}
+              href={props.website}
+              a11yTitle="website"
+              margin={{
+                "top": "xsmall",
+                "right": "xsmall",}}
+            />
+          </div>
+        }
+        {props.video != null &&
+          <div>
+            <Button
+              icon={<Video size="small"/>}
+              label={<Text size="small">Video</Text>}
+              href={props.video}
+              a11yTitle="video"
+              margin={{
+                "top": "xsmall",
+                "right": "xsmall",}}
+            />
+          </div>
+        }
+        {props.award != null &&
+          <div>
+            <Button
+              primary="true"
+              color="accent-1"
+              icon={<Trophy size="small"/>}
+              label={<Text size="small">{props.award}</Text>}
+              a11yTitle={props.award}
+              margin={{
+                "top": "xsmall",
+                "right": "xsmall",}}
+            />
+          </div>
+        }
+        {props.demo != null &&
+          <div>
+            <Button
+              theme={badgeTheme}
+              icon={<Multimedia size="small"/>}
+              label={<Text size="small">Demo</Text>}
+              href={props.demo}
+              a11yTitle="demo"
+              margin={{
+                "top": "xsmall",
+                "right": "xsmall",}}
+            />
+          </div>
+        }
+      </ThemeContext.Extend>
+    </Box>
+  </Box>
+);
 
 class App extends Component {
   state = {
@@ -188,70 +267,96 @@ class App extends Component {
       <Grommet theme={theme} full>
         <ResponsiveContext.Consumer>
           {size => (
-            <Box fill="horizontal" align="center" alignContent="center">
+            <Box fill={true}>
               <AppBar>
-                <Heading level='3' margin="middle" color='heavy' style={headerStyle}>
+                <Heading level='3' color='heavy' style={headerStyle}>
                   Hyunsung Cho&nbsp;
                   {/*<i class="fas fa-heart" color='brand'></i>&nbsp;*/}
                   {/*<i class="fas fa-mobile-alt"></i>&nbsp;*/}
                   {/*<i class="far fa-comments"></i>&nbsp;*/}
                   {/*<i class="far fa-user"></i>*/}
                 </Heading>
-              </AppBar>
-              <Box direction="column">
-                <Box fill="horizontal" align="center" alignContent="center" pad='large' direction='row' flex overflow={{ horizontal: 'hidden' }}>
-                  <Box height="medium" width="medium">
-                    <Image
-                      fit="cover"
-                      margin="medium"
-                      src={profile}
-                    />
+                {size == "small" ?
+                  <Menu
+                    dropAlign={{ top: 'top', right: 'right' }}
+                  />
+                  :
+                  <Box>
+
                   </Box>
-                  <Box orientation="column">
-                    <Paragraph margin="small">
-                      I am a masters student in the
-                      <Text color="darklavender"> <a href="https://nmsl.kaist.ac.kr" target="_blank"
-                                                     style={{"color": "black", "background": "lavender"}}>
-                        Networking & Mobile Systems Lab</a> </Text>
-                      at KAIST.
-                      My research in mobile HCI and ubiquitous computing focuses on designing and
-                      building <Text style={{"background-color": "lavender"}}><b>context-aware</b></Text> systems
-                      that provide just-in-time, just-in-place digital support for users.
-                    </Paragraph>
-                    <Box margin="small" direction="row-responsive" gap="medium">
-                      <Button plain alignSelf="start" icon={<DocumentPdf />} label="CV" target="_blank" href={cv} />
-                      <Button plain alignSelf="start" icon={<Mail />} label="Email" target="_blank" href="mailto:hyunsungcho@kaist.ac.kr" />
-                      <Button plain alignSelf="start" icon={<Book />} label="Google Scholars" target="_blank" href="https://scholar.google.co.kr/citations?user=VpQp9hEAAAAJ"/>
+                }
+
+              </AppBar>
+              <Box direction="column" flex={true} overflow='auto' align="center" alignContent="center">
+                <Box flex={false}>
+                  <Box fill="horizontal" align="center" alignContent="center" pad='large' direction='row'>
+                    <Box height="medium" width="medium">
+                      <Image
+                        fit="cover"
+                        margin="medium"
+                        src={profile}
+                      />
+                    </Box>
+                    <Box orientation="column">
+                      <Paragraph margin="small">
+                        I am a masters student in the <Anchor color="black"  href="https://nmsl.kaist.ac.kr" primary label="Networking & Mobile Systems Lab" /> at KAIST.
+                        My research in mobile HCI and ubiquitous computing focuses on designing and
+                        building <Text style={{"background-color": "lavender"}}>context-aware</Text> systems
+                        that provide just-in-time, just-in-place digital support for users.
+                      </Paragraph>
+                      <Box margin="small" direction="row-responsive" gap="medium">
+                        <Button plain alignSelf="start" icon={<DocumentPdf />} label="CV" target="_blank" href={cv} />
+                        <Button plain alignSelf="start" icon={<Mail />} label="Email" target="_blank" href="mailto:hyunsungcho@kaist.ac.kr" />
+                        <Button plain alignSelf="start" icon={<Book />} label="Google Scholars" target="_blank" href="https://scholar.google.co.kr/citations?user=VpQp9hEAAAAJ"/>
+                      </Box>
                     </Box>
                   </Box>
-                </Box>
-                <Box fill="horizontal" pad="large" direction="column" background="lavender">
-                  <Heading level="3">Latest News & Travels</Heading>
-                  { newsData.news.map(news => (
-                    <NewsItem date={news.date} text={news.text}/>
-                  ))}
-                </Box>
-                <Box fill="horizontal" pad="large" direction="column" background="white">
-                  <Heading level="3">Publications</Heading>
-                  <Heading level="4">Conference and Journal Papers</Heading>
-                  { paperData.papers.map(paper => (
-                    <div>
-                      <PubItem title={paper.title} authors={paper.authors} venue={paper.venue}/>
-                    </div>
-                  ))}
-                  <Heading level="4">Posters, Demos, Videos, and Workshop Papers</Heading>
-                  { posterData.posters.map(poster => (
-                    <div>
-                      <PubItem title={poster.title} authors={poster.authors} venue={poster.venue}/>
-                    </div>
-                  ))}
-                  {/*<Heading>Publications</Heading>*/}
-                  {/*<Paragraph margin="small">*/}
-                  {/*Knocker: Vibroacoustic-based Object Recognition with Smartphones (UbiComp '19)*/}
-                  {/*</Paragraph>*/}
-                </Box>
-                <Box fill="horizontal" pad="large" direction="column" background="lavender" align="center" alignContent="center">
-                  Copyright © 2019 Hyunsung Cho
+                  <Box fill="horizontal" pad="large" direction="column" background="lavender">
+                    <Heading level="3">Latest News & Travels</Heading>
+                    { newsData.news.map(news => (
+                      <NewsItem date={news.date} text={news.text}/>
+                    ))}
+                  </Box>
+
+                  <Box fill="horizontal" pad="large" direction="column" background="white">
+                    <Heading level="3">Publications</Heading>
+                    <Heading level="4">Conference and Journal Papers</Heading>
+                    { paperData.papers.map(paper => (
+                      <div>
+                        <PubItem title={paper.title} authors={paper.authors} venue={paper.venue} award={paper.award}
+                                 paper_link={paper.paper_link} website={paper.website} video={paper.video}/>
+                      </div>
+                    ))}
+                    <Heading level="4">Posters, Demos, Videos, and Workshop Papers</Heading>
+                    { posterData.posters.map(poster => (
+                      <div>
+                        <PubItem title={poster.title} authors={poster.authors} venue={poster.venue} award={poster.award}
+                                  paper_link={poster.paper_link} website={poster.website} video={poster.video}/>
+                      </div>
+                    ))}
+                    {/*<Heading>Publications</Heading>*/}
+                    {/*<Paragraph margin="small">*/}
+                    {/*Knocker: Vibroacoustic-based Object Recognition with Smartphones (UbiComp '19)*/}
+                    {/*</Paragraph>*/}
+                  </Box>
+
+                  <Box fill="horizontal" pad="large" direction="column" background="lavender">
+                    <Heading level="3">Project Gallery</Heading>
+                    <Grid
+                      columns={ size == "small" ? "full" : ["1/2", "1/2"]}
+                      gap="small"
+                      >
+                      { projectData.projects.map(project => (
+                        <ProjectItem title={project.title} award={project.award} paper_link={project.paper_link}
+                                     website={project.website} demo={project.demo}
+                        />
+                      ))}
+                    </Grid>
+                  </Box>
+
+                  <Box fill="horizontal" pad="large" direction="column" background="lavender" align="center" alignContent="center">
+                    Copyright © 2019 Hyunsung Cho
+                  </Box>
                 </Box>
               </Box>
             </Box>
