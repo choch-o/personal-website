@@ -276,7 +276,7 @@ class App extends Component {
                   {/*<i class="far fa-comments"></i>&nbsp;*/}
                   {/*<i class="far fa-user"></i>*/}
                 </Heading>
-                {size == "small" ?
+                {size === "small" ?
                   <Menu
                     dropAlign={{ top: 'top', right: 'right' }}
                   />
@@ -334,16 +334,12 @@ class App extends Component {
                                   paper_link={poster.paper_link} website={poster.website} video={poster.video}/>
                       </div>
                     ))}
-                    {/*<Heading>Publications</Heading>*/}
-                    {/*<Paragraph margin="small">*/}
-                    {/*Knocker: Vibroacoustic-based Object Recognition with Smartphones (UbiComp '19)*/}
-                    {/*</Paragraph>*/}
                   </Box>
 
                   <Box fill="horizontal" pad="large" direction="column" background="lavender">
                     <Heading level="3">Project Gallery</Heading>
                     <Grid
-                      columns={ size == "small" ? "full" : ["1/2", "1/2"]}
+                      columns={ size === "small" ? "full" : ["1/2", "1/2"]}
                       gap="small"
                       >
                       { projectData.projects.map(project => (
