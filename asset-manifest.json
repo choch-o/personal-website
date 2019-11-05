@@ -1,13 +1,11 @@
 {
-  "main.js": "/static/js/main.47c191ab.chunk.js",
-  "main.js.map": "/static/js/main.47c191ab.chunk.js.map",
+  "main.js": "/static/js/main.b2c9c01f.chunk.js",
+  "main.js.map": "/static/js/main.b2c9c01f.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.fdfcfda2.js",
   "runtime~main.js.map": "/static/js/runtime~main.fdfcfda2.js.map",
-  "static/js/2.ce84e364.chunk.js": "/static/js/2.ce84e364.chunk.js",
-  "static/js/2.ce84e364.chunk.js.map": "/static/js/2.ce84e364.chunk.js.map",
+  "static/js/2.92902808.chunk.js": "/static/js/2.92902808.chunk.js",
+  "static/js/2.92902808.chunk.js.map": "/static/js/2.92902808.chunk.js.map",
   "index.html": "/index.html",
-  "precache-manifest.bcf7ac2e9e5bc8b2f4da2129e0a9d6b6.js": "/precache-manifest.bcf7ac2e9e5bc8b2f4da2129e0a9d6b6.js",
-  "service-worker.js": "/service-worker.js",
-  "static/media/cv_190926.pdf": "/static/media/cv_190926.bb2f9d8f.pdf",
-  "static/media/profile_donut.jpeg": "/static/media/profile_donut.4d979e8a.jpeg"
+  "precache-manifest.40214a2f2c1398b0c44442deef4cf1ca.js": "/precache-manifest.40214a2f2c1398b0c44442deef4cf1ca.js",
+  "service-worker.js": "/service-worker.js"
 }
