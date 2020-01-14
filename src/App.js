@@ -10,7 +10,7 @@ import { projectData } from './ProjectData';
 
 const profile = '/img/profile_jeju_green.JPG';
 const placeholder ='/img/happy_patrick.jpg';
-const cv = 'pdf/cv_190926.pdf';
+const cv = 'pdf/cv_200115.pdf';
 
 const theme = {
   global: {
@@ -336,19 +336,19 @@ class App extends Component {
                     ))}
                   </Box>
 
-                  <Box fill="horizontal" pad="large" direction="column" background="lavender">
-                    <Heading level="3">Project Gallery</Heading>
-                    <Grid
-                      columns={ size === "small" ? "full" : ["1/2", "1/2"]}
-                      gap="small"
-                      >
-                      { projectData.projects.map(project => (
-                        <ProjectItem title={project.title} award={project.award} paper_link={project.paper_link}
-                                     website={project.website} demo={project.demo}
-                        />
-                      ))}
-                    </Grid>
-                  </Box>
+                  {/*<Box fill="horizontal" pad="large" direction="column" background="lavender">*/}
+                    {/*<Heading level="3">Project Gallery</Heading>*/}
+                    {/*<Grid*/}
+                      {/*columns={ size === "small" ? "full" : ["1/2", "1/2"]}*/}
+                      {/*gap="small"*/}
+                      {/*>*/}
+                      {/*{ projectData.projects.map(project => (*/}
+                        {/*<ProjectItem title={project.title} award={project.award} paper_link={project.paper_link}*/}
+                                     {/*website={project.website} demo={project.demo}*/}
+                        {/*/>*/}
+                      {/*))}*/}
+                    {/*</Grid>*/}
+                  {/*</Box>*/}
 
                   <Box fill="horizontal" pad="large" direction="column" background="lavender" align="center" alignContent="center">
                     Copyright © 2019 Hyunsung Cho
