@@ -8,24 +8,40 @@ import { newsData } from './NewsData';
 import { paperData, posterData } from './PubData';
 import { projectData } from './ProjectData';
 
-const profile = '/img/profile_jeju_green.JPG';
+const profile = '/img/profile_xmas.JPG';
 const placeholder ='/img/happy_patrick.jpg';
-const cv = 'pdf/cv_200115.pdf';
+const cv = 'pdf/cv_200311.pdf';
 
 const theme = {
   global: {
     colors: {
-      brand: '#EFEEFE',
+      background: '#f8f7f5',
+      brand: '#b1ca80',
+      active: '#436c00',
+      focus: '#436c00',
+      bullet: '#436c00',
+      highlight: '#b1ca80',
+
+      // lavender theme
       lavender: '#EFEEFE',
       pinklavender: '#F0E2FF',
       darklavender: '#A077CC',
       heavy: '#000000',
+
+      // white and green theme
+      wg_darkgreen: '#002500',
+      wg_mediumgreen: '#436c00',
+      wg_lightgreen: '#b1ca80',
+      wg_white: '#f8f7f5',
+      wg_lightgrey: '#bab9b6'
+
     },
     font: {
       family: 'Lato, Helvetica Neue',
       size: '14px',
       height: '20px',
     },
+    "::selection": '#b1ca80',
   },
 };
 
@@ -33,6 +49,8 @@ const headerStyle = {
   fontSize: '36px',
   color: '#000000',
   fontFamily: 'Permanent Marker',
+  textAlign: 'center',
+  alignSelf: 'center',
 };
 
 const pubTitleStyle = {
@@ -67,6 +85,7 @@ const AppBar = (props) => (
     tag='header'
     direction='row'
     align='center'
+    as='header'
     justify='between'
     pad={{ horizontal: 'large' }}
     // elevation='small'
@@ -78,13 +97,13 @@ const AppBar = (props) => (
 
 const NewsItem = (props) => (
   <Box direction="row" margin={{"bottom": "small"}}>
-    <Box width="small">
-      <Text size="small" margin={{"right": "small",}}>
+    <Box width="xsmall" margin={{"right": "small"}}>
+      <Text size={(props.size === "small") ? "small" : "medium"} >
         <b>{props.date}</b>
       </Text>
     </Box>
-    <Box width="large">
-      <Text size="small">
+    <Box width="large" margin={{"left": "small",}}>
+      <Text size={(props.size === "small") ? "small" : "medium"} >
         <Markdown>
           {props.text}
         </Markdown>
@@ -95,13 +114,13 @@ const NewsItem = (props) => (
 
 const PubItem = (props) => (
   <Box direction="row" margin="small">
-    <Text color="darklavender" margin={{"right": "small",}}>✦</Text>
+    <Text color="bullet" margin={{"right": "small",}}>✦</Text>
     <Box direction="column">
       <Text size="medium">
         <b>
           {props.paper_link == null ?
             props.title :
-            <Button href={props.paper_link} plain="true" hoverIndicator={{color: "lavender", opacity: "strong",}}
+            <Button href={props.paper_link} plain="true" hoverIndicator={{color: "brand", opacity: "strong",}}
                     style={pubTitleStyle}>
               {props.title}
             </Button>
@@ -151,7 +170,7 @@ const PubItem = (props) => (
             <div>
               <Button
                 primary="true"
-                color="accent-1"
+                color="highlight"
                 icon={<Trophy size="small"/>}
                 label={<Text size="small">{props.award}</Text>}
                 a11yTitle={props.award}
@@ -168,10 +187,10 @@ const PubItem = (props) => (
 );
 
 const ProjectItem = (props) => (
-  <Box margin="small" pad="medium" background="white" elevation="xsmall" orientation="column">
+  <Box margin="small" pad="medium" background="background" elevation="xsmall" orientation="column">
     <Box height="small" width="fill">
       <Image
-        fit="cover"
+        fit="contain"
         src={placeholder}
       />
     </Box>
@@ -268,40 +287,42 @@ class App extends Component {
         <ResponsiveContext.Consumer>
           {size => (
             <Box fill={true}>
-              <AppBar>
+              <AppBar alignSelf="center" textAlign="center">
                 <Heading level='3' color='heavy' style={headerStyle}>
-                  Hyunsung Cho&nbsp;
+                  Hyunsung Cho
                   {/*<i class="fas fa-heart" color='brand'></i>&nbsp;*/}
                   {/*<i class="fas fa-mobile-alt"></i>&nbsp;*/}
                   {/*<i class="far fa-comments"></i>&nbsp;*/}
                   {/*<i class="far fa-user"></i>*/}
                 </Heading>
-                {size === "small" ?
-                  <Menu
-                    dropAlign={{ top: 'top', right: 'right' }}
-                  />
-                  :
-                  <Box>
+                {/*{size === "small" ?*/}
+                {/*  <Menu*/}
+                {/*    dropAlign={{ top: 'top', right: 'right' }}*/}
+                {/*  />*/}
+                {/*  :*/}
+                {/*  <Box>*/}
 
-                  </Box>
-                }
+                {/*  </Box>*/}
+                {/*}*/}
 
               </AppBar>
               <Box direction="column" flex={true} overflow='auto' align="center" alignContent="center">
                 <Box flex={false}>
-                  <Box fill="horizontal" align="center" alignContent="center" pad='large' direction='row'>
-                    <Box height="medium" width="medium">
+                  <Box fill="horizontal" align="center" alignContent="center" pad='large'
+                       direction={(size === "small") ? 'column' : 'row'}
+                       background="white" margin={{"top": "small", "bottom": "small"}} elevation="xsmall">
+                    <Box height="270px" width="360px">
                       <Image
-                        fit="cover"
+                        fit="contain"
                         margin="medium"
                         src={profile}
                       />
                     </Box>
                     <Box orientation="column">
                       <Paragraph margin="small">
-                        I am a masters student in the <Anchor color="black"  href="https://nmsl.kaist.ac.kr" primary label="Networking & Mobile Systems Lab" /> at KAIST.
+                        I am a PhD student in the <Anchor color="black"  href="https://nmsl.kaist.ac.kr" primary label="Networking & Mobile Systems Lab" /> at KAIST.
                         My research in mobile HCI and ubiquitous computing focuses on designing and
-                        building <Text style={{"background-color": "lavender"}}>context-aware</Text> systems
+                        building <Text style={{"background-color": "brand"}}>context-aware</Text> systems
                         that provide just-in-time, just-in-place digital support for users.
                       </Paragraph>
                       <Box margin="small" direction="row-responsive" gap="medium">
@@ -311,14 +332,19 @@ class App extends Component {
                       </Box>
                     </Box>
                   </Box>
-                  <Box fill="horizontal" pad="large" direction="column" background="lavender">
-                    <Heading level="3">Latest News & Travels</Heading>
+                  <Box fill="horizontal" pad="large" direction="column" background="white"
+                       margin={{"top": "small", "bottom": "small"}}
+                       elevation="xsmall" >
+                    <Heading level="3">
+                             <span style={{"background-color": "wg_lightgreen"}}>Latest News & Travels</span></Heading>
                     { newsData.news.map(news => (
-                      <NewsItem date={news.date} text={news.text}/>
+                      <NewsItem size={size} date={news.date} text={news.text}/>
                     ))}
                   </Box>
 
-                  <Box fill="horizontal" pad="large" direction="column" background="white">
+                  <Box fill="horizontal" pad="large" direction="column" background="white"
+                       margin={{"top": "small", "bottom": "small"}}
+                       elevation="xsmall">
                     <Heading level="3">Publications</Heading>
                     <Heading level="4">Conference and Journal Papers</Heading>
                     { paperData.papers.map(paper => (
@@ -350,7 +376,7 @@ class App extends Component {
                     {/*</Grid>*/}
                   {/*</Box>*/}
 
-                  <Box fill="horizontal" pad="large" direction="column" background="lavender" align="center" alignContent="center">
+                  <Box fill="horizontal" pad="large" direction="column" align="center" alignContent="center">
                     Copyright © 2019 Hyunsung Cho
                   </Box>
                 </Box>

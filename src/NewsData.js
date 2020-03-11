@@ -4,25 +4,37 @@
 let newsData = {
   "news": [
     {
-      "date": "Sep 2, 2019",
-      "text": "Won the Best TA Award of KAIST SoC for my effort on _CS341: Intro to Networking_ course in 2019 Spring semester",
+      "date": "Mar 2020",
+      "text": "Paper accepted with minor revisions at CSCW 2020!"
     },
     {
-      "date": "Aug 27 - Sep 1, 2019",
-      "text": "Attending the Google WTM Scholars Retreat in Sydney, Australia!",
+      "date": "Feb 2020",
+      "text": "Earned a MS degree in Computer Science"
     },
     {
-      "date": "Aug 8, 2019",
-      "text": "Presenting my ongoing work on sender-controlled mobile instant message notifications at HCI@KAIST Summer Workshop",
+      "date": "Feb 2020",
+      "text": "Selected for the summer internship at Nokia Bell Labs, Cambridge, UK"
     },
     {
-      "date": "Jul 11, 2019",
+      "date": "Sep 2019",
+      "text": "Best TA Award of KAIST CS for _CS341: Intro to Networking_"
+    },
+    {
+      "date": "Aug 2019",
+      "text": "Attending the Google WTM Scholars Retreat (Aug 27-Sep 1) in Sydney, Australia",
+    },
+    {
+      "date": "Aug 2019",
+      "text": "Presenting my ongoing work on sender-controlled mobile instant message notifications at HCI@KAIST " +
+          "Summer Workshop",
+    },
+    {
+      "date": "Jul 2019",
       "text": "Selected as a scholarship recipient of the 2019 Google Women Techmakers (WTM) Scholars Program"
     },
     {
-      "date": "Jul 5, 2019",
-      "text": "Our paper _Knocker: Vibroacoustic-based Object Recognition with Smartphones_ " +
-      "is accepted at ACM IMWUT (UbiComp) '19."
+      "date": "Jul 2019",
+      "text": "Paper accepted at ACM IMWUT (UbiComp) 2019."
     }
   ],
 };

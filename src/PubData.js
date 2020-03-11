@@ -1,6 +1,17 @@
 let paperData = {
   "papers": [
     {
+      "title": "I Share, You Care: Private Status Sharing and Sender-Controlled Notifications in " +
+          "Mobile Instant Messaging",
+      "venue": "ACM CSCW 2020 (accepted with minor revisions)",
+      "authors": "**Hyunsung Cho**, Jinyoung Oh, Juho Kim, and Sung-Ju Lee",
+      "paper_link": null,
+      "slides": null,
+      "award": null,
+      "video": null,
+      "website": null,
+    },
+    {
       "title": "Knocker:  Vibroacoustic-based Object Recognition with Smartphones",
       "venue": "ACM IMWUT (UbiComp) 2019",
       "authors": "Taesik Gong, **Hyunsung Cho**, Bowon Lee, and Sung-Ju Lee",
@@ -28,7 +39,7 @@ let paperData = {
     //   "authors": "",
     //   "paper_link": null,
     //   "slides": null,
-    //   "award": false,
+    //   "award": null,
     //   "video": null,
     //   "website": null,
     // },
@@ -39,7 +50,7 @@ let posterData = {
   "posters": [
     {
       "title": "Sender-Controlled Mobile Instant Message Notifications  Using  Activity  Information",
-      "venue": "ACM MobiSys '19 Demos",
+      "venue": "ACM MobiSys 2019 Demos",
       "authors": "**Hyunsung Cho**, Jinyoung Oh, Juho Kim, and Sung-Ju Lee",
       "paper_link": "/pdf/mybutler_mobisys19_demo.pdf",
       "slides": null,
@@ -49,7 +60,7 @@ let posterData = {
     },
     {
       "title": "Real-Time Object Identification with a Smartphone Knock",
-      "venue": "ACM MobiSys '19 Videos",
+      "venue": "ACM MobiSys 2019 Videos",
       "authors": "Taesik Gong, **Hyunsung Cho**, Bowon Lee, and Sung-Ju Lee",
       "paper_link": "/pdf/knocker_mobisys19_video.pdf",
       "slides": null,
@@ -59,7 +70,7 @@ let posterData = {
     },
     {
       "title": "Identifying Everyday Objects with a Smartphone Knock",
-      "venue": "ACM CHI '18 Late-Breaking Work",
+      "venue": "ACM CHI 2018 Late-Breaking Work",
       "authors": "Taesik Gong, **Hyunsung Cho**, Bowon Lee, and Sung-Ju Lee",
       "paper_link": "/pdf/knocker_chi18_lbw.pdf",
       "slides": null,
