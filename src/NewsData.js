@@ -9,7 +9,7 @@ let newsData = {
     },
     {
       "date": "Feb 2020",
-      "text": "Earned a MS degree in Computer Science"
+      "text": "Earned an MS degree in Computer Science"
     },
     {
       "date": "Feb 2020",
