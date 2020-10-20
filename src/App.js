@@ -2,15 +2,14 @@ import { hot } from 'react-hot-loader/root';
 import React, { Component } from 'react';
 import { Box, Button, Collapsible, Menu, Heading, Grommet, Layer, ResponsiveContext,
   Image, Paragraph, Markdown, Text, Grid, ThemeContext, Anchor } from 'grommet';
-import { FormClose, Notification, DocumentPdf, Mail, Github, Book, Home, Video, Trophy, Multimedia, PlayFill, Play, Document} from 'grommet-icons';
+import { FormClose, Notification, DocumentPdf, Mail, Github, Book, Home, Video, Trophy, Twitter, Multimedia, PlayFill, Play, Document} from 'grommet-icons';
 
 import { newsData } from './NewsData';
 import { paperData, posterData } from './PubData';
-import { projectData } from './ProjectData';
 
 const profile = '/img/profile_xmas.JPG';
 const placeholder ='/img/happy_patrick.jpg';
-const cv = 'pdf/cv_200311.pdf';
+const cv = 'pdf/cv.pdf';
 
 const theme = {
   global: {
@@ -320,15 +319,19 @@ class App extends Component {
                     </Box>
                     <Box orientation="column">
                       <Paragraph margin="small">
-                        I am a PhD student in the <Anchor color="black"  href="https://nmsl.kaist.ac.kr" primary label="Networking & Mobile Systems Lab" /> at KAIST.
-                        My research in mobile HCI and ubiquitous computing focuses on designing and
-                        building <Text style={{"background-color": "brand"}}>context-aware</Text> systems
-                        that provide just-in-time, just-in-place digital support for users.
+                        I am a 1st-year PhD student in the <Anchor color="black"  href="https://nmsl.kaist.ac.kr" primary label="Networking & Mobile Systems Lab" /> at KAIST.
+                        I'm interested in HCI, ubiquitous computing, CSCW, and mobile computing.
+                        My current research focuses on understanding and modeling problematic smartphone usage behaviors and designing
+                        context-aware systems for digital wellbeing.
+                        {/*designing and*/}
+                        {/*building <Text style={{"background-color": "brand"}}>context-aware</Text> systems*/}
+                        {/*that provide just-in-time, just-in-place digital support for users.*/}
                       </Paragraph>
                       <Box margin="small" direction="row-responsive" gap="medium">
                         <Button plain alignSelf="start" icon={<DocumentPdf />} label="CV" target="_blank" href={cv} />
                         <Button plain alignSelf="start" icon={<Mail />} label="Email" target="_blank" href="mailto:hyunsungcho@kaist.ac.kr" />
                         <Button plain alignSelf="start" icon={<Book />} label="Google Scholars" target="_blank" href="https://scholar.google.co.kr/citations?user=VpQp9hEAAAAJ"/>
+                        <Button plain alignSelf="start" icon={<Twitter />} label="Twitter" target="_blank" href="https://twitter.com/hschocho"/>
                       </Box>
                     </Box>
                   </Box>
