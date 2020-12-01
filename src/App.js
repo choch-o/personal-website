@@ -9,7 +9,7 @@ import { paperData, posterData } from './PubData';
 
 const profile = '/img/profile_xmas.JPG';
 const placeholder ='/img/happy_patrick.jpg';
-const cv = 'pdf/cv_201124.pdf';
+const cv = '/pdf/cv_201201.pdf';
 
 const theme = {
   global: {

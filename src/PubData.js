@@ -53,7 +53,7 @@ let posterData = {
           "Mobile Instant Messaging",
       "venue": "ACM CSCW 2020 Demos",
       "authors": "**Hyunsung Cho**, Jinyoung Oh, Juho Kim, and Sung-Ju Lee",
-      "paper_link": null,
+      "paper_link": "/pdf/CSCW20Demo_MyButler.pdf",
       "slides": null,
       "award": null,
       "video": null,
