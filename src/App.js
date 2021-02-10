@@ -9,7 +9,7 @@ import { paperData, posterData } from './PubData';
 
 const profile = '/img/profile_xmas.JPG';
 const placeholder ='/img/happy_patrick.jpg';
-const cv = 'pdf/cv.pdf';
+const cv = '/pdf/cv_201201.pdf';
 
 const theme = {
   global: {
@@ -318,16 +318,17 @@ class App extends Component {
                       />
                     </Box>
                     <Box orientation="column">
-                      <Paragraph margin="small">
-                        I am a 1st-year PhD student in the <Anchor color="black"  href="https://nmsl.kaist.ac.kr" primary label="Networking & Mobile Systems Lab" /> at KAIST.
+                      <Paragraph margin="medium">
+                        I am a first-year PhD student in the <Anchor color="black"  href="https://nmsl.kaist.ac.kr" primary label="Networking & Mobile Systems Lab" /> at KAIST.
                         I'm interested in HCI, ubiquitous computing, CSCW, and mobile computing.
+                        I love designing novel context-aware systems based on mobile sensing data.
                         My current research focuses on understanding and modeling problematic smartphone usage behaviors and designing
                         context-aware systems for digital wellbeing.
                         {/*designing and*/}
                         {/*building <Text style={{"background-color": "brand"}}>context-aware</Text> systems*/}
                         {/*that provide just-in-time, just-in-place digital support for users.*/}
                       </Paragraph>
-                      <Box margin="small" direction="row-responsive" gap="medium">
+                      <Box margin="medium" direction="row-responsive" gap="medium">
                         <Button plain alignSelf="start" icon={<DocumentPdf />} label="CV" target="_blank" href={cv} />
                         <Button plain alignSelf="start" icon={<Mail />} label="Email" target="_blank" href="mailto:hyunsungcho@kaist.ac.kr" />
                         <Button plain alignSelf="start" icon={<Book />} label="Google Scholars" target="_blank" href="https://scholar.google.co.kr/citations?user=VpQp9hEAAAAJ"/>

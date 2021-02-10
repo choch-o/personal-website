@@ -12,8 +12,12 @@ let newsData = {
       "text": "👩🏻‍🏫 Virtually attending CSCW Asia Winter School on Dec 18-19"
     },
     {
+      "date": "Nov 2020",
+      "text": "🏆 Won the NAVER Ph.D. Fellowship Award"
+    },
+    {
       "date": "Oct 2020",
-      "text": "👩🏻‍🏫 **Virtually attending CSCW 2020 :) Join my paper presentation on Oct 19 + demo on Oct 20!**"
+      "text": "👩🏻‍🏫 Virtually attending CSCW 2020 for my paper presentation and demo"
 
     },
     {
@@ -23,7 +27,7 @@ let newsData = {
     },
     {
       "date": "Mar 2020",
-      "text": "🗞 Paper accepted to ACM CSCW 2020!"
+      "text": "🗞 Paper accepted to ACM CSCW 2020"
     },
     {
       "date": "Feb 2020",
@@ -52,7 +56,7 @@ let newsData = {
     },
     {
       "date": "Jul 2019",
-      "text": "🗞 Paper accepted at ACM IMWUT (UbiComp) 2019"
+      "text": "🗞 Paper accepted to ACM IMWUT (UbiComp) 2019"
     }
   ],
 };
