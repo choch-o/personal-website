@@ -39,6 +39,7 @@ const theme = {
       family: 'Lato, Helvetica Neue',
       size: '14px',
       height: '20px',
+      color: 'black'
     },
     "::selection": '#b1ca80',
   },
@@ -47,9 +48,10 @@ const theme = {
 const headerStyle = {
   fontSize: '36px',
   color: '#000000',
-  fontFamily: 'Permanent Marker',
+  fontFamily: 'Helvetica Neue',
   textAlign: 'center',
   alignSelf: 'center',
+  fontWeight: '200'
 };
 
 const pubTitleStyle = {
@@ -92,6 +94,14 @@ const AppBar = (props) => (
     flex={false}
     {...props}
   />
+);
+
+const Section = ({children}) => (
+    <Box fill="horizontal" pad="large" direction="column" background="white"
+         margin={{"top": "small", "bottom": "small"}}
+         elevation="xsmall">
+      <div>{children}</div>
+    </Box>
 );
 
 const NewsItem = (props) => (
@@ -286,14 +296,17 @@ class App extends Component {
         <ResponsiveContext.Consumer>
           {size => (
             <Box fill={true}>
-              <AppBar alignSelf="center" textAlign="center">
+              <AppBar alignSelf="center" textAlign="center" direction="column">
                 <Heading level='3' color='heavy' style={headerStyle}>
-                  Hyunsung Cho
+                  HYUNSUNG CHO
                   {/*<i class="fas fa-heart" color='brand'></i>&nbsp;*/}
                   {/*<i class="fas fa-mobile-alt"></i>&nbsp;*/}
                   {/*<i class="far fa-comments"></i>&nbsp;*/}
                   {/*<i class="far fa-user"></i>*/}
                 </Heading>
+                {/*<Heading level='5' style={{"fontWeight": "400"}} color={'active'} margin="xsmall">*/}
+                {/*  hjʌn sʌŋ ʧoʊ*/}
+                {/*</Heading>*/}
                 {/*{size === "small" ?*/}
                 {/*  <Menu*/}
                 {/*    dropAlign={{ top: 'top', right: 'right' }}*/}
@@ -310,23 +323,32 @@ class App extends Component {
                   <Box fill="horizontal" align="center" alignContent="center" pad='large'
                        direction={(size === "small") ? 'column' : 'row'}
                        background="white" margin={{"top": "small", "bottom": "small"}} elevation="xsmall">
-                    <Box height="270px" width="360px">
+                    <Box height="270px" width="360px" direction="column" margin="small">
                       <Image
                         fit="contain"
-                        margin="medium"
+                        // margin="medium"
                         src={profile}
                       />
+                      <Text size="small">* Hyunsung is pronounced as [hjʌn sʌŋ].</Text>
+                      {/*<Text size="small" alignSelf="center">Hyunsung is pronounced hjʌn sʌŋ.</Text>*/}
                     </Box>
-                    <Box orientation="column">
-                      <Paragraph margin="medium">
-                        I am a first-year PhD student in the <Anchor color="black"  href="https://nmsl.kaist.ac.kr" primary label="Networking & Mobile Systems Lab" /> at KAIST.
-                        I'm interested in HCI, ubiquitous computing, CSCW, and mobile computing.
-                        I love designing novel context-aware systems based on mobile sensing data.
-                        My current research focuses on understanding and modeling problematic smartphone usage behaviors and designing
-                        context-aware systems for digital wellbeing.
-                        {/*designing and*/}
-                        {/*building <Text style={{"background-color": "brand"}}>context-aware</Text> systems*/}
-                        {/*that provide just-in-time, just-in-place digital support for users.*/}
+                    <Box orientation="column" width="600px">
+                      <Paragraph margin="small" size="small" fill={true} color="black">
+                        I'm a graduate student researcher in the
+                        <Anchor color="black" href="https://nmsl.kaist.ac.kr" weight="normal"
+                                label=" Networking & Mobile Systems Lab"/> at KAIST advised by Prof. Sung-Ju Lee.
+                        I earned my B.S. and M.S. degrees in Computer Science at KAIST in 2018 and 2020.
+                        I'm planning to start my Ph.D. program in the U.S. in Fall 2021.
+                      </Paragraph>
+                      <Paragraph margin="small" size="small" fill={true} color="black">
+                        My research interests lie at the intersection of HCI, ubiquitous computing, CSCW, and mobile computing.
+                        I like building novel applications of context-aware computing, which provide just-in-time,
+                        just-in-place digital support for users based on contextual and behavioral information
+                        inferred from mobile sensing and user interaction data.
+                        My past and current projects aim to reduce digital distractions and to promote people's
+                        health and wellbeing through context-aware computing.
+                        {/*I'm also interested in computational approaches to model human behavior and interaction to */}
+                        {/*improve context-awareness of a system.*/}
                       </Paragraph>
                       <Box margin="medium" direction="row-responsive" gap="medium">
                         <Button plain alignSelf="start" icon={<DocumentPdf />} label="CV" target="_blank" href={cv} />
@@ -336,20 +358,16 @@ class App extends Component {
                       </Box>
                     </Box>
                   </Box>
-                  <Box fill="horizontal" pad="large" direction="column" background="white"
-                       margin={{"top": "small", "bottom": "small"}}
-                       elevation="xsmall" >
-                    <Heading level="3">
-                             <span style={{"background-color": "wg_lightgreen"}}>Latest News & Travels</span></Heading>
-                    { newsData.news.map(news => (
-                      <NewsItem size={size} date={news.date} text={news.text}/>
-                    ))}
-                  </Box>
 
-                  <Box fill="horizontal" pad="large" direction="column" background="white"
-                       margin={{"top": "small", "bottom": "small"}}
-                       elevation="xsmall">
-                    <Heading level="3">Publications</Heading>
+                  <Section>
+                    <Heading level="3" color="black">Latest News & Travels</Heading>
+                    { newsData.news.map(news => (
+                        <NewsItem size={size} date={news.date} text={news.text}/>
+                    ))}
+                  </Section>
+
+                  <Section>
+                    <Heading level="3" color="black">Publications</Heading>
                     <Heading level="4">Conference and Journal Papers</Heading>
                     { paperData.papers.map(paper => (
                       <div>
@@ -364,7 +382,7 @@ class App extends Component {
                                   paper_link={poster.paper_link} website={poster.website} video={poster.video}/>
                       </div>
                     ))}
-                  </Box>
+                  </Section>
 
                   {/*<Box fill="horizontal" pad="large" direction="column" background="lavender">*/}
                     {/*<Heading level="3">Project Gallery</Heading>*/}
