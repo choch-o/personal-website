@@ -9,7 +9,7 @@ import { paperData, posterData } from './PubData';
 
 const profile = '/img/profile_xmas.JPG';
 const placeholder ='/img/happy_patrick.jpg';
-const cv = '/pdf/cv_210212.pdf';
+const cv = '/pdf/cv_210831.pdf';
 
 const theme = {
   global: {
@@ -39,10 +39,11 @@ const theme = {
       family: 'Lato, Helvetica Neue',
       size: '14px',
       height: '20px',
-      color: 'black'
+      color: 'black',
+      // weight: '300'
     },
     "::selection": '#b1ca80',
-  },
+  }
 };
 
 const headerStyle = {
@@ -53,6 +54,18 @@ const headerStyle = {
   alignSelf: 'center',
   fontWeight: '200'
 };
+
+const anchorStyle = {
+  fontWeight: 'normal',
+  'text-decoration': 'underline ',
+  '-webkit-text-decoration': 'underline',
+  'text-decoration-color': theme.global.colors.brand,
+  '-webkit-text-decoration-color': theme.global.colors.brand,
+}
+
+const subtleAnchorStyle = {
+  fontWeight: 'normal',
+}
 
 const pubTitleStyle = {
   textDecoration: 'none',
@@ -284,13 +297,36 @@ const ProjectItem = (props) => (
   </Box>
 );
 
+function isLatestNews(dateStr) {
+  /* Incompatible in Safari */
+  // let newsDate = Date.parse(dateStr)
+  // let today = Date.now()
+  // let year = 31556952000
+  // return today - newsDate < year;
+
+  let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+  let today = new Date()
+  let thisMonth = today.getMonth()
+  let thisYear = today.getFullYear()
+  let newsDateItems = dateStr.split(" ")
+  let newsMonth = newsDateItems[0]
+  let newsYear = newsDateItems[1]
+  if ((thisYear - 1 > newsYear) ||
+      ((months.indexOf(newsMonth) < thisMonth) && (thisYear > newsYear))) {
+    return false
+  } else {
+    return true
+  }
+}
+
 class App extends Component {
   state = {
     showSidebar: false,
+    showAllNews: false,
   }
 
   render() {
-    const { showSidebar } = this.state;
+    const { showSidebar, showAllNews } = this.state;
     return (
       <Grommet theme={theme} full>
         <ResponsiveContext.Consumer>
@@ -329,30 +365,47 @@ class App extends Component {
                         // margin="medium"
                         src={profile}
                       />
-                      <Text size="small">* Hyunsung is pronounced as [hjʌn sʌŋ].</Text>
+                      {/*<Text size="small">* Hyunsung is pronounced as [hjʌn sʌŋ].</Text>*/}
                       {/*<Text size="small" alignSelf="center">Hyunsung is pronounced hjʌn sʌŋ.</Text>*/}
                     </Box>
                     <Box orientation="column" width="600px">
                       <Paragraph margin="small" size="small" fill={true} color="black">
-                        I'm a graduate student researcher in the
-                        <Anchor color="black" href="https://nmsl.kaist.ac.kr" weight="normal"
-                                label=" Networking & Mobile Systems Lab"/> at KAIST advised by Prof. Sung-Ju Lee.
-                        I earned my B.S. and M.S. degrees in Computer Science at KAIST in 2018 and 2020.
-                        I'm planning to start my Ph.D. program in the U.S. in Fall 2021.
+                        I'm a first-year PhD Student in <Anchor color='black' href="https://augmented-perception.org"
+                                label="Augmented Perception Lab"
+                                style={anchorStyle}
+                        /> at the <Anchor color='black' href="https://www.hcii.cmu.edu"
+                                label="Human-Computer Interaction Institute"
+                                style={anchorStyle}/> at <Anchor color='black' href="https://www.cs.cmu.edu"
+                                label="Carnegie Mellon University"
+                                style={anchorStyle}
+                        />, advised by Prof. <Anchor color='black' href="https://davidlindlbauer.com"
+                                                     label="David Lindlbauer" style={anchorStyle}/>.
+                        My current research interest is in context-aware adaptation of user interface in mixed reality
+                        based on human perception.
+                        {/*My research interests lie at the intersection of HCI, ubiquitous computing, CSCW, and mobile computing.*/}
+                        {/*I like building novel applications of context-aware computing, which provide just-in-time,*/}
+                        {/*just-in-place digital support for users based on contextual and behavioral information*/}
+                        {/*inferred from mobile sensing and user interaction data.*/}
                       </Paragraph>
                       <Paragraph margin="small" size="small" fill={true} color="black">
-                        My research interests lie at the intersection of HCI, ubiquitous computing, CSCW, and mobile computing.
-                        I like building novel applications of context-aware computing, which provide just-in-time,
-                        just-in-place digital support for users based on contextual and behavioral information
-                        inferred from mobile sensing and user interaction data.
-                        My past and current projects aim to reduce digital distractions and to promote people's
-                        health and wellbeing through context-aware computing.
+
+                        I earned my B.S. and M.S. degrees in Computer Science at KAIST in 2018 and 2020.
+                        Prior to CMU, I was a member
+                        of <Anchor color="black" href="https://nmsl.kaist.ac.kr"
+                                   label="Networking & Mobile Systems Lab"
+                                   style={subtleAnchorStyle}/> at <Anchor color="black" href="https://www.kaist.ac.kr/en/"
+                                                                    label="KAIST" style={subtleAnchorStyle}/> advised by
+                        Prof. <Anchor color="black" href="https://sites.google.com/site/wewantsj/"
+                                      label="Sung-Ju Lee" style={subtleAnchorStyle}/>.
+                        At KAIST, I worked on projects that aim to reduce digital distractions
+                        and to promote people's health and wellbeing through context-aware computing.
+
                         {/*I'm also interested in computational approaches to model human behavior and interaction to */}
                         {/*improve context-awareness of a system.*/}
                       </Paragraph>
                       <Box margin="medium" direction="row-responsive" gap="medium">
                         <Button plain alignSelf="start" icon={<DocumentPdf />} label="CV" target="_blank" href={cv} />
-                        <Button plain alignSelf="start" icon={<Mail />} label="Email" target="_blank" href="mailto:hyunsungcho@kaist.ac.kr" />
+                        <Button plain alignSelf="start" icon={<Mail />} label="Email" target="_blank" href="mailto:hyunsung@andrew.cmu.edu" />
                         <Button plain alignSelf="start" icon={<Book />} label="Google Scholars" target="_blank" href="https://scholar.google.co.kr/citations?user=VpQp9hEAAAAJ"/>
                         <Button plain alignSelf="start" icon={<Twitter />} label="Twitter" target="_blank" href="https://twitter.com/hschocho"/>
                       </Box>
@@ -361,9 +414,23 @@ class App extends Component {
 
                   <Section>
                     <Heading level="3" color="black">Latest News & Travels</Heading>
-                    { newsData.news.map(news => (
-                        <NewsItem size={size} date={news.date} text={news.text}/>
-                    ))}
+                    { this.state.showAllNews ?
+                        newsData.news.map(news => {
+                          return <NewsItem size={size} date={news.date} text={news.text}/>
+                        })
+                        :
+                        newsData.news.map(news => {
+                          return isLatestNews(news.date) ?
+                              <NewsItem size={size} date={news.date} text={news.text}/>
+                              : <div></div>
+                        })
+                    }
+                    <Box align="center">
+                      <Anchor color="focus" style={subtleAnchorStyle}
+                              onClick={() => {this.setState({showAllNews: !showAllNews})}}
+                              label={this.state.showAllNews ? "Show Latest" : "Show All"}
+                      />
+                    </Box>
                   </Section>
 
                   <Section>

@@ -1,6 +1,16 @@
 let paperData = {
   "papers": [
     {
+      "title": "Reflect, not Regret: Understanding Regretful Smartphone Use with App Feature-Level Analysis",
+      "venue": "ACM CSCW 2021 To appear",
+      "authors": "**Hyunsung Cho**, DaEun Choi, Donghwi Kim, Wan Ju Kang, Eun Kyoung Choe, and Sung-Ju Lee",
+      "paper_link": null,
+      "slides": null,
+      "award": null,
+      "video": null,
+      "website": null,
+    },
+    {
       "title": "I Share, You Care: Private Status Sharing and Sender-Controlled Notifications in " +
           "Mobile Instant Messaging",
       "venue": "ACM CSCW 2020",
