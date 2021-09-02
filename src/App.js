@@ -405,7 +405,7 @@ class App extends Component {
                       </Paragraph>
                       <Box margin="medium" direction="row-responsive" gap="medium">
                         <Button plain alignSelf="start" icon={<DocumentPdf />} label="CV" target="_blank" href={cv} />
-                        <Button plain alignSelf="start" icon={<Mail />} label="Email" target="_blank" href="mailto:hyunsung@andrew.cmu.edu" />
+                        <Button plain alignSelf="start" icon={<Mail />} label="Email" target="_blank" href="mailto:hyunsung@cs.cmu.edu" />
                         <Button plain alignSelf="start" icon={<Book />} label="Google Scholars" target="_blank" href="https://scholar.google.co.kr/citations?user=VpQp9hEAAAAJ"/>
                         <Button plain alignSelf="start" icon={<Twitter />} label="Twitter" target="_blank" href="https://twitter.com/hschocho"/>
                       </Box>
