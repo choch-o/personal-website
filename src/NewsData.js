@@ -5,6 +5,10 @@ let newsData = {
   "news": [
     {
       "date": "Oct 2021",
+      "text": "🏆 CSCW 2021 Best Paper Award & Methods Recognition"
+    },
+    {
+      "date": "Oct 2021",
       "text": "👩🏻‍🏫 Paper presentation at CSCW 2021"
     },
     {

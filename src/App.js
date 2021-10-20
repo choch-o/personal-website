@@ -2,14 +2,15 @@ import { hot } from 'react-hot-loader/root';
 import React, { Component } from 'react';
 import { Box, Button, Collapsible, Menu, Heading, Grommet, Layer, ResponsiveContext,
   Image, Paragraph, Markdown, Text, Grid, ThemeContext, Anchor } from 'grommet';
-import { FormClose, Notification, DocumentPdf, Mail, Github, Book, Home, Video, Trophy, Twitter, Multimedia, PlayFill, Play, Document} from 'grommet-icons';
+import { FormClose, Notification, DocumentPdf, Mail, Github, Book, Home, Video, Trophy, Twitter, Multimedia,
+  PlayFill, Play, Document, Star} from 'grommet-icons';
 
 import { newsData } from './NewsData';
 import { paperData, posterData } from './PubData';
 
 const profile = '/img/profile_xmas.JPG';
 const placeholder ='/img/happy_patrick.jpg';
-const cv = '/pdf/cv_210831.pdf';
+const cv = '/pdf/cv_211020.pdf';
 
 const theme = {
   global: {
@@ -20,6 +21,8 @@ const theme = {
       focus: '#436c00',
       bullet: '#436c00',
       highlight: '#b1ca80',
+      award: '#EBCA23',
+      recognition: '#B4DB75',
 
       // lavender theme
       lavender: '#EFEEFE',
@@ -161,6 +164,20 @@ const PubItem = (props) => (
         direction="row"
       >
         <ThemeContext.Extend value={badgeTheme}>
+          {props.pdf != null &&
+          <div>
+            <Button
+                theme={badgeTheme}
+                icon={<DocumentPdf size="small"/>}
+                label={<Text size="small">PDF</Text>}
+                href={props.pdf}
+                a11yTitle="PDF"
+                margin={{
+                  "top": "xsmall",
+                  "right": "xsmall",}}
+            />
+          </div>
+          }
           {props.website != null &&
             <div>
               <Button
@@ -192,7 +209,7 @@ const PubItem = (props) => (
             <div>
               <Button
                 primary="true"
-                color="highlight"
+                color="award"
                 icon={<Trophy size="small"/>}
                 label={<Text size="small">{props.award}</Text>}
                 a11yTitle={props.award}
@@ -201,6 +218,20 @@ const PubItem = (props) => (
                   "right": "xsmall",}}
               />
             </div>
+          }
+          {props.award2 != null &&
+          <div>
+            <Button
+                primary="true"
+                color="recognition"
+                icon={<Star size="small"/>}
+                label={<Text size="small">{props.award2}</Text>}
+                a11yTitle={props.award2}
+                margin={{
+                  "top": "xsmall",
+                  "right": "xsmall",}}
+            />
+          </div>
           }
         </ThemeContext.Extend>
       </Box>
@@ -407,7 +438,7 @@ class App extends Component {
                         <Button plain alignSelf="start" icon={<DocumentPdf />} label="CV" target="_blank" href={cv} />
                         <Button plain alignSelf="start" icon={<Mail />} label="Email" target="_blank" href="mailto:hyunsung@cs.cmu.edu" />
                         <Button plain alignSelf="start" icon={<Book />} label="Google Scholars" target="_blank" href="https://scholar.google.co.kr/citations?user=VpQp9hEAAAAJ"/>
-                        <Button plain alignSelf="start" icon={<Twitter />} label="Twitter" target="_blank" href="https://twitter.com/hschocho"/>
+                        <Button plain alignSelf="start" icon={<Twitter />} label="Twitter" target="_blank" href="https://twitter.com/hciresearcher"/>
                       </Box>
                     </Box>
                   </Box>
@@ -439,6 +470,7 @@ class App extends Component {
                     { paperData.papers.map(paper => (
                       <div>
                         <PubItem title={paper.title} authors={paper.authors} venue={paper.venue} award={paper.award}
+                                 award2={paper.award2} pdf={paper.pdf}
                                  paper_link={paper.paper_link} website={paper.website} video={paper.video}/>
                       </div>
                     ))}
@@ -446,7 +478,8 @@ class App extends Component {
                     { posterData.posters.map(poster => (
                       <div>
                         <PubItem title={poster.title} authors={poster.authors} venue={poster.venue} award={poster.award}
-                                  paper_link={poster.paper_link} website={poster.website} video={poster.video}/>
+                                 paper_link={poster.paper_link} pdf={poster.pdf}
+                                 website={poster.website} video={poster.video}/>
                       </div>
                     ))}
                   </Section>
