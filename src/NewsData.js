@@ -21,7 +21,7 @@ let newsData = {
     },
     {
       "date": "Aug 2021",
-      "text": "🏅 Top 18 global summer interns at Nokia Bell Labs"
+      "text": "🏆 Bell Labs Summer Intern Award for Outstanding Innovation"
     },
     {
       "date": "Jul 2021",

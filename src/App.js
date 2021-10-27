@@ -10,7 +10,7 @@ import { paperData, posterData } from './PubData';
 
 const profile = '/img/profile_xmas.JPG';
 const placeholder ='/img/happy_patrick.jpg';
-const cv = '/pdf/cv_211020.pdf';
+const cv = '/pdf/CV_HyunsungCho.pdf';
 
 const theme = {
   global: {
