@@ -1,6 +1,20 @@
 let paperData = {
   "papers": [
     {
+      "title": "Prediction for Retrospection: Integrating Algorithmic Stress Prediction into Personal Informatics " +
+          "Systems for College Students' Mental Health",
+      "venue": "ACM CHI 2022",
+      "authors": "Taewan Kim, Haesoo Kim, Ha Yeon Lee, Hwarang Goh, Shakhboz Abdigapporov, Mingon Jeong, " +
+          "**Hyunsung Cho**, Kyungsik Han, Youngtae Noh, Sung-Ju Lee, Hwajung Hong",
+      "paper_link": null,
+      "pdf": null,
+      "award": null,
+      "award2": null,
+      "video": null,
+      "website": null,
+      "acm_dl": null,
+    },
+    {
       "title": "Reflect, not Regret: Understanding Regretful Smartphone Use with App Feature-Level Analysis",
       "venue": "ACM CSCW 2021",
       "authors": "**Hyunsung Cho**, DaEun Choi, Donghwi Kim, Wan Ju Kang, Eun Kyoung Choe, and Sung-Ju Lee",
