@@ -4,8 +4,12 @@
 let newsData = {
   "news": [
     {
+      "date": "Jun 2022",
+      "text": "✈️ Summer School on Computational Interaction @ Saarbrücken, Germany (Jun 13 - 18)"
+    },
+    {
       "date": "Apr 2022",
-      "text": "✈️ Attending CHI 2022 @ New Orleans, LA"
+      "text": "✈️ CHI 2022 @ New Orleans, LA (Apr 29 - May 7)"
     },
     {
       "date": "Nov 2021",
@@ -25,7 +29,7 @@ let newsData = {
     },
     {
       "date": "Aug 2021",
-      "text": "✈️ Moved to Pittsburgh, PA for my PhD at CMU"
+      "text": "📍 Moved to Pittsburgh, PA for my PhD at CMU"
     },
     {
       "date": "Aug 2021",
