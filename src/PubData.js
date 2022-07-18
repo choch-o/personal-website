@@ -1,11 +1,35 @@
 let paperData = {
   "papers": [
     {
+      "title": "FLAME: Federated Learning Across Multi-device Environments",
+      "venue": "ACM IMWUT (UbiComp) 2022",
+      "authors": "**Hyunsung Cho**, Akhil Mathur, and Fahim Kawsar",
+      "paper_link": null,
+      "pdf": null,
+      "award": null,
+      "award2": null,
+      "video": null,
+      "website": null,
+      "acm_dl": null,
+    },
+    {
+      "title": "You Are Not Alone: How Trending Stress Topics Brought #Awareness and #Resonance on Campus",
+      "venue": "ACM CSCW 2022",
+      "authors": "Ryuhaerang Choi, Chanwoo Yoon, **Hyunsung Cho**, Hwajung Hong, Uichin Lee, and Sung-Ju Lee",
+      "paper_link": null,
+      "pdf": null,
+      "award": null,
+      "award2": null,
+      "video": null,
+      "website": null,
+      "acm_dl": null,
+    },
+    {
       "title": "Prediction for Retrospection: Integrating Algorithmic Stress Prediction into Personal Informatics " +
           "Systems for College Students' Mental Health",
       "venue": "ACM CHI 2022",
       "authors": "Taewan Kim, Haesoo Kim, Ha Yeon Lee, Hwarang Goh, Shakhboz Abdigapporov, Mingon Jeong, " +
-          "**Hyunsung Cho**, Kyungsik Han, Youngtae Noh, Sung-Ju Lee, Hwajung Hong",
+          "**Hyunsung Cho**, Kyungsik Han, Youngtae Noh, Sung-Ju Lee, and Hwajung Hong",
       "paper_link": "https://drive.google.com/file/d/15Mbmp5yQL4PuZuLA8on3dYVlt0MAHgzF/view",
       "pdf": "https://drive.google.com/file/d/15Mbmp5yQL4PuZuLA8on3dYVlt0MAHgzF/view",
       "award": null,
@@ -81,6 +105,17 @@ let paperData = {
 
 let posterData = {
   "posters": [
+    {
+      "title": "Facilitating Instant Interactions for Stressful Experiences Sharing and Peer Support",
+      "venue": "ACM MobiSys 2022 Demos",
+      "authors": "Ryuhaeraeng Choi, Chanwoo Yun, **Hyunsung Cho**, Hwajung Hong, Uichin Lee, and Sung-Ju Lee",
+      "paper_link": "https://dl.acm.org/doi/10.1145/3498361.3538672",
+      "pdf": null,
+      "slides": null,
+      "award": null,
+      "video": null,
+      "website": null
+    },
     {
       "title": "Device or User: Rethinking Federated Learning in Personal-Scale Multi-Device Environments",
       "venue": "ACM SenSys 2021 Workshop on Challenges in Artificial Intelligence and Machine Learning for Internet of Things (AIChallengeIoT)",

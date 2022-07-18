@@ -35,10 +35,10 @@ let newsData = {
       "date": "Aug 2021",
       "text": "🏆 Bell Labs Summer Intern Award for Outstanding Innovation"
     },
-    {
-      "date": "Jul 2021",
-      "text": "🗞 Paper accepted to ACM CSCW 2021"
-    },
+    // {
+    //   "date": "Jul 2021",
+    //   "text": "🗞 Paper accepted to ACM CSCW 2021"
+    // },
     {
       "date": "May 2021",
       "text": "👩🏻‍💻 Starting my internship at Nokia Bell Labs, Cambridge, UK"
@@ -65,10 +65,10 @@ let newsData = {
       "text": "👩🏻‍🏫 Presentation at 2020 HCI@KAIST " +
           "Summer Workshop",
     },
-    {
-      "date": "Mar 2020",
-      "text": "🗞 Paper accepted to ACM CSCW 2020"
-    },
+    // {
+    //   "date": "Mar 2020",
+    //   "text": "🗞 Paper accepted to ACM CSCW 2020"
+    // },
     {
       "date": "Feb 2020",
       "text": "👩🏻‍🎓 Officially a Master in Computer Science"
@@ -88,11 +88,11 @@ let newsData = {
     {
       "date": "Jul 2019",
       "text": "🏆 Google Women Techmakers (WTM) Scholar 2019"
-    },
-    {
-      "date": "Jul 2019",
-      "text": "🗞 Paper accepted to ACM IMWUT (UbiComp) 2019"
     }
+    // {
+    //   "date": "Jul 2019",
+    //   "text": "🗞 Paper accepted to ACM IMWUT (UbiComp) 2019"
+    // }
   ],
 };
 

@@ -52,7 +52,7 @@ const theme = {
 const headerStyle = {
   fontSize: '36px',
   color: '#000000',
-  fontFamily: 'Helvetica Neue',
+  fontFamily: 'Helvetica',
   textAlign: 'center',
   alignSelf: 'center',
   fontWeight: '200'
@@ -411,8 +411,9 @@ class App extends Component {
                                 style={anchorStyle}
                         />, advised by Prof. <Anchor color='black' href="https://davidlindlbauer.com"
                                                      label="David Lindlbauer" style={anchorStyle}/>.
-                        My current research interest is in context-aware adaptation of user interface in mixed reality
-                        based on human perception.
+                        My research interest lies in Human-Computer Interaction (HCI) and ubiquitous computing.
+                        I explore how we can advance users’ capabilities while minimizing distraction through context-aware digital support.
+                        My current research focuses on context-aware adaptation of user interface in Mixed Reality through computational interaction.
                         {/*My research interests lie at the intersection of HCI, ubiquitous computing, CSCW, and mobile computing.*/}
                         {/*I like building novel applications of context-aware computing, which provide just-in-time,*/}
                         {/*just-in-place digital support for users based on contextual and behavioral information*/}
@@ -420,16 +421,17 @@ class App extends Component {
                       </Paragraph>
                       <Paragraph margin="small" size="small" fill={true} color="black">
 
-                        I earned my B.S. and M.S. degrees in Computer Science at KAIST in 2018 and 2020.
-                        Prior to CMU, I was a member
+                        Prior to joining CMU, I was a member
                         of <Anchor color="black" href="https://nmsl.kaist.ac.kr"
                                    label="Networking & Mobile Systems Lab"
                                    style={subtleAnchorStyle}/> at <Anchor color="black" href="https://www.kaist.ac.kr/en/"
                                                                     label="KAIST" style={subtleAnchorStyle}/> advised by
                         Prof. <Anchor color="black" href="https://sites.google.com/site/wewantsj/"
-                                      label="Sung-Ju Lee" style={subtleAnchorStyle}/>.
-                        At KAIST, I worked on projects that aim to reduce digital distractions
-                        and to promote people's health and wellbeing through context-aware computing.
+                                      label="Sung-Ju Lee" style={subtleAnchorStyle}/> and a research intern
+                        at <Anchor color="black" href="https://www.bell-labs.com" label="Nokia Bell Labs"
+                                   style={subtleAnchorStyle}/>, Cambridge, UK.
+                        In past projects, I studied context-aware computing to reduce digital distractions for digital wellbeing;
+                        and user-centered federated learning approach for privacy-preserving ubiquitous computing.
 
                         {/*I'm also interested in computational approaches to model human behavior and interaction to */}
                         {/*improve context-awareness of a system.*/}
