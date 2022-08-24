@@ -401,7 +401,7 @@ class App extends Component {
                     </Box>
                     <Box orientation="column" width="600px">
                       <Paragraph margin="small" size="small" fill={true} color="black">
-                        I'm a first-year PhD Student in <Anchor color='black' href="https://augmented-perception.org"
+                        I'm a second-year PhD Student in <Anchor color='black' href="https://augmented-perception.org"
                                 label="Augmented Perception Lab"
                                 style={anchorStyle}
                         /> at the <Anchor color='black' href="https://www.hcii.cmu.edu"

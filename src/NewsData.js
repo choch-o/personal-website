@@ -4,6 +4,14 @@
 let newsData = {
   "news": [
     {
+      "date": "Sep 2022",
+      "text": "👩🏻‍🏫 Paper presentation (FLAME) at UbiComp 2022"
+    },
+    {
+      "date": "Sep 2022",
+      "text": "✈️ UbiComp 2022 @ Cambridge, UK (Sep 11 - Sep 15)"
+    },
+    {
       "date": "Jun 2022",
       "text": "✈️ Summer School on Computational Interaction @ Saarbrücken, Germany (Jun 13 - 18)"
     },
@@ -21,7 +29,7 @@ let newsData = {
     },
     {
       "date": "Oct 2021",
-      "text": "👩🏻‍🏫 Paper presentation at CSCW 2021"
+      "text": "👩🏻‍🏫 Paper presentation (Finesse) at CSCW 2021"
     },
     {
       "date": "Oct 2021",
@@ -57,7 +65,7 @@ let newsData = {
     },
     {
       "date": "Oct 2020",
-      "text": "👩🏻‍🏫 Paper presentation & demo at CSCW 2020"
+      "text": "👩🏻‍🏫 Paper presentation & demo (MyButler) at CSCW 2020"
 
     },
     {
