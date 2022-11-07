@@ -4,6 +4,10 @@
 let newsData = {
   "news": [
     {
+      "date": "Oct 2022",
+      "text": "✈️ UIST 2022 @ Bend, Oregon, USA (Oct 29 - Nov 4) 🎃"
+    },
+    {
       "date": "Sep 2022",
       "text": "👩🏻‍🏫 Paper presentation (FLAME) at UbiComp 2022"
     },
