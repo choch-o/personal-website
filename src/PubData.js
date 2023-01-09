@@ -11,18 +11,20 @@ let paperData = {
       "video": null,
       "website": null,
       "acm_dl": null,
+      "slides": "https://drive.google.com/file/d/1YUrr84_d31BTcjjWfkm4M4oOCouLaiLo/view?usp=share_link",
     },
     {
       "title": "You Are Not Alone: How Trending Stress Topics Brought #Awareness and #Resonance on Campus",
       "venue": "ACM CSCW 2022",
       "authors": "Ryuhaerang Choi, Chanwoo Yoon, **Hyunsung Cho**, Hwajung Hong, Uichin Lee, and Sung-Ju Lee",
-      "paper_link": null,
-      "pdf": null,
+      "paper_link": "https://dl.acm.org/doi/abs/10.1145/3555612",
+      "pdf": "https://dl.acm.org/doi/abs/10.1145/3555612",
       "award": null,
       "award2": null,
       "video": null,
       "website": null,
       "acm_dl": null,
+      "slides": null,
     },
     {
       "title": "Prediction for Retrospection: Integrating Algorithmic Stress Prediction into Personal Informatics " +
@@ -37,6 +39,7 @@ let paperData = {
       "video": "https://www.youtube.com/watch?v=iATPtKkLFHo",
       "website": null,
       "acm_dl": null,
+      "slides": null,
     },
     {
       "title": "Reflect, not Regret: Understanding Regretful Smartphone Use with App Feature-Level Analysis",
@@ -74,7 +77,7 @@ let paperData = {
       "award": null,
       "award2": null,
       "video": "https://www.youtube.com/watch?v=SyQn1vr_HeQ&feature=youtu.be",
-      "website": "https://nmsl.kaist.ac.kr/projects/knocker/"
+      "website": "https://nmsl.kaist.ac.kr/projects/knocker/",
     },
     {
       "title": "Intelligent Positive Computing with Mobile,  Wearable,  and IoT Devices: Literature Review and Research Directions",

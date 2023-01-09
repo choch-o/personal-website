@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Box, Button, Collapsible, Menu, Heading, Grommet, Layer, ResponsiveContext,
   Image, Paragraph, Markdown, Text, Grid, ThemeContext, Anchor } from 'grommet';
 import { FormClose, Notification, DocumentPdf, Mail, Github, Book, Home, Video, Trophy, Twitter, Multimedia,
-  PlayFill, Play, Document, Star} from 'grommet-icons';
+  PlayFill, Play, Document, Star, Desktop} from 'grommet-icons';
 
 import { newsData } from './NewsData';
 import { paperData, posterData } from './PubData';
@@ -220,18 +220,31 @@ const PubItem = (props) => (
             </div>
           }
           {props.award2 != null &&
-          <div>
-            <Button
-                primary="true"
-                color="recognition"
-                icon={<Star size="small"/>}
-                label={<Text size="small">{props.award2}</Text>}
-                a11yTitle={props.award2}
-                margin={{
-                  "top": "xsmall",
-                  "right": "xsmall",}}
-            />
-          </div>
+            <div>
+              <Button
+                  primary="true"
+                  color="recognition"
+                  icon={<Star size="small"/>}
+                  label={<Text size="small">{props.award2}</Text>}
+                  a11yTitle={props.award2}
+                  margin={{
+                    "top": "xsmall",
+                    "right": "xsmall",}}
+              />
+            </div>
+          }
+          {props.slides != null &&
+            <div>
+              <Button
+                  icon={<Desktop size="small"/>}
+                  label={<Text size="small">Slides</Text>}
+                  href={props.slides}
+                  a11yTitle="slides"
+                  margin={{
+                    "top": "xsmall",
+                    "right": "xsmall",}}
+              />
+            </div>
           }
         </ThemeContext.Extend>
       </Box>
@@ -473,7 +486,8 @@ class App extends Component {
                       <div>
                         <PubItem title={paper.title} authors={paper.authors} venue={paper.venue} award={paper.award}
                                  award2={paper.award2} pdf={paper.pdf}
-                                 paper_link={paper.paper_link} website={paper.website} video={paper.video}/>
+                                 paper_link={paper.paper_link} website={paper.website} video={paper.video}
+                                 slides={paper.slides}/>
                       </div>
                     ))}
                     <Heading level="4">Posters, Demos, Videos, and Workshop Papers</Heading>
@@ -481,7 +495,7 @@ class App extends Component {
                       <div>
                         <PubItem title={poster.title} authors={poster.authors} venue={poster.venue} award={poster.award}
                                  paper_link={poster.paper_link} pdf={poster.pdf}
-                                 website={poster.website} video={poster.video}/>
+                                 website={poster.website} video={poster.video} slides={poster.slides}/>
                       </div>
                     ))}
                   </Section>
