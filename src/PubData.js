@@ -1,6 +1,20 @@
 let paperData = {
   "papers": [
     {
+      "title": "A Survey on Remote Assistance and Training in Mixed Reality Environments",
+      "venue": "IEEE TVCG: Transactions on Visualization and Computer Graphics 2023",
+      "authors": "Catarina G. Fidalgo, Yukang Yan, **Hyunsung Cho**, Mauricio Sousa, David Lindlbauer, and Joaquim Jorge",
+      "paper_link": "https://ieeexplore.ieee.org/abstract/document/10049704/",
+      "pdf": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10049704",
+      "award": null,
+      "award2": null,
+      "video": null,
+      "website": "https://augmented-perception.org/publications/2023-training-survey.html",
+      "acm_dl": "https://ieeexplore.ieee.org/abstract/document/10049704/",
+      "slides": null,
+      "thumbnail": "/img/vr_survey_thumbnail.png",
+    },
+    {
       "title": "FLAME: Federated Learning Across Multi-device Environments",
       "venue": "ACM IMWUT (UbiComp) 2022",
       "authors": "**Hyunsung Cho**, Akhil Mathur, and Fahim Kawsar",
@@ -12,6 +26,7 @@ let paperData = {
       "website": null,
       "acm_dl": null,
       "slides": "https://drive.google.com/file/d/1YUrr84_d31BTcjjWfkm4M4oOCouLaiLo/view?usp=share_link",
+      "thumbnail": "/img/flame_thumbnail.png",
     },
     {
       "title": "You Are Not Alone: How Trending Stress Topics Brought #Awareness and #Resonance on Campus",
@@ -25,10 +40,11 @@ let paperData = {
       "website": null,
       "acm_dl": null,
       "slides": null,
+      "thumbnail": "/img/stresstrendmeter_thumbnail.png",
     },
     {
       "title": "Prediction for Retrospection: Integrating Algorithmic Stress Prediction into Personal Informatics " +
-          "Systems for College Students' Mental Health",
+          "\n\nSystems for College Students' Mental Health",
       "venue": "ACM CHI 2022",
       "authors": "Taewan Kim, Haesoo Kim, Ha Yeon Lee, Hwarang Goh, Shakhboz Abdigapporov, Mingon Jeong, " +
           "**Hyunsung Cho**, Kyungsik Han, Youngtae Noh, Sung-Ju Lee, and Hwajung Hong",
@@ -40,6 +56,7 @@ let paperData = {
       "website": null,
       "acm_dl": null,
       "slides": null,
+      "thumbnail": "/img/mindscope_thumbnail.png",
     },
     {
       "title": "Reflect, not Regret: Understanding Regretful Smartphone Use with App Feature-Level Analysis",
@@ -52,7 +69,9 @@ let paperData = {
       "award2": "Methods Recognition",
       "video": "https://www.youtube.com/watch?v=ZWva_OIv2xw",
       "website": null,
-      "acm_dl": null,
+      "acm_dl": "https://dl.acm.org/doi/abs/10.1145/3479600",
+      "code": "https://github.com/choch-o/Finesse-public",
+      "thumbnail": "/img/finesse_thumbnail.png",
     },
     {
       "title": "I Share, You Care: Private Status Sharing and Sender-Controlled Notifications in " +
@@ -66,6 +85,7 @@ let paperData = {
       "award2": null,
       "video": "https://www.youtube.com/watch?v=hUmjE5giPC0&feature=youtu.be",
       "website": "https://nmsl.kaist.ac.kr/projects/mybutler/",
+      "thumbnail": "/img/mybutler_thumbnail.png",
     },
     {
       "title": "Knocker:  Vibroacoustic-based Object Recognition with Smartphones",
@@ -78,6 +98,7 @@ let paperData = {
       "award2": null,
       "video": "https://www.youtube.com/watch?v=SyQn1vr_HeQ&feature=youtu.be",
       "website": "https://nmsl.kaist.ac.kr/projects/knocker/",
+      "thumbnail": "/img/knocker_thumbnail.png",
     },
     {
       "title": "Intelligent Positive Computing with Mobile,  Wearable,  and IoT Devices: Literature Review and Research Directions",
@@ -90,6 +111,7 @@ let paperData = {
       "award2": null,
       "video": null,
       "website": null,
+      "thumbnail": "/img/positivecomputing_thumbnail.png",
     },
 
 
