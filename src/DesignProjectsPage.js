@@ -117,6 +117,12 @@ class DesignProjectsPage extends Component {
                                     onEsc={() => this.setState({currentProject: null})}
                                     onClickOutside={() => this.setState({currentProject: null})}
                                     >
+                                    {(size === "small") && <Button
+                                        alignSelf="end"
+                                        margin={{top: "small", right: "small"}}
+                                        onClick={() => this.setState({currentProject: null})}>
+                                        <Close size="medium"/>
+                                    </Button>}
                                     <Box width="fill" pad="medium" overflow="scroll">
                                         <Box height="medium" width="large" alignSelf="center">
                                             <Carousel fill alignSelf="center">
@@ -128,7 +134,7 @@ class DesignProjectsPage extends Component {
                                             {this.state.currentProject.description}
                                         </Text>
                                     </Box>
-                                    <Button
+                                    {(size !== "small") && <Button
                                         icon={<Close size="small"/>}
                                         label={<Text size="medium">Close</Text>}
                                         margin={{
@@ -136,7 +142,8 @@ class DesignProjectsPage extends Component {
                                         }}
                                         alignSelf="center"
                                         a11yTitle="code"
-                                        onClick={() => this.setState({currentProject: null})} />
+                                        onClick={() => this.setState({currentProject: null})}/>
+                                    }
                                 </Layer>
                             )}
                         </Box>
