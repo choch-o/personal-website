@@ -1,6 +1,6 @@
 import { hot } from 'react-hot-loader/root';
 import React, { Component } from 'react';
-import { Box, Button, Heading, Grommet, ResponsiveContext} from 'grommet';
+import { Anchor, Box, Button, Heading, Grommet, ResponsiveContext} from 'grommet';
 import { ResearchPage } from './ResearchPage';
 import { DesignProjectsPage } from "./DesignProjectsPage";
 
@@ -179,15 +179,19 @@ class App extends Component {
                     |
                   </Heading>
                   <Heading level='5' style={(size === "small") ? subheaderStyleMobile : subheaderStyle}
-                           onClick={() => this.switchTab("diy_projects")} margin="none">
-                    <Button hoverIndicator={{color: "brand", opacity: "strong"}}>
-                      {(this.state.currentTab === "research")
-                          ? <span>DIY Projects</span>
-                          : <span style={{'textDecoration': 'underline ',
-                            'WebkitTextDecoration': 'underline',
-                            'textDecorationColor': theme.global.colors.brand,
-                            'WebkitTextDecorationColor': theme.global.colors.brand,}}>DIY Projects</span>}
-                    </Button>
+                           // onClick={() => this.switchTab("diy_projects")}
+                           margin="none">
+                    {/*<Button hoverIndicator={{color: "brand", opacity: "strong"}}>*/}
+                      <Anchor href="https://hyunsungcho.cargo.site/" label="DIY Projects" target="_blank"
+                              style={{fontWeight: '200', color: 'black'}}
+                      />
+                      {/*{(this.state.currentTab === "research")*/}
+                      {/*    ? <span>DIY Projects</span>*/}
+                      {/*    : <span style={{'textDecoration': 'underline ',*/}
+                      {/*      'WebkitTextDecoration': 'underline',*/}
+                      {/*      'textDecorationColor': theme.global.colors.brand,*/}
+                      {/*      'WebkitTextDecorationColor': theme.global.colors.brand,}}>DIY Projects</span>}*/}
+                    {/*</Button>*/}
                   </Heading>
                 </Box>
               </AppBar>
