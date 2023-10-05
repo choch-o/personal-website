@@ -4,6 +4,14 @@
 let newsData = {
   "news": [
     {
+      "date": "Oct 2023",
+      "text": "👩🏻‍🏫 Paper presentation (RealityReplay) at UbiComp 2023"
+    },
+    {
+      "date": "Oct 2023",
+      "text": "✈️ UbiComp / ISWC 2023 @ Cancún, Mexico (Oct 8 - 13)"
+    },
+    {
       "date": "Sep 2023",
       "text": "✈️ 10th Heidelberg Laureate Forum, Heidelberg, Germany (Sep 23 - 30)"
     },
