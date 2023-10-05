@@ -85,6 +85,8 @@ class ResearchPage extends Component {
                                         My research interest lies in Human-Computer Interaction (HCI) and ubiquitous computing.
                                         I explore how we can advance users’ capabilities while minimizing distraction through context-aware digital support.
                                         My current research focuses on context-aware adaptation of user interface in Mixed Reality through computational interaction.
+                                        I worked as a Research Scientist Intern at Meta Reality Labs, Redmond, USA in Summer 2023 with Dr. <Anchor color='black' href="https://www.kashyaptodi.com/"
+                                                label="Kash Todi" style={this.anchorStyle}/>.
                                         {/*My research interests lie at the intersection of HCI, ubiquitous computing, CSCW, and mobile computing.*/}
                                         {/*I like building novel applications of context-aware computing, which provide just-in-time,*/}
                                         {/*just-in-place digital support for users based on contextual and behavioral information*/}
