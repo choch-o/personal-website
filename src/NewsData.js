@@ -4,6 +4,22 @@
 let newsData = {
   "news": [
     {
+      "date": "May 2024",
+      "text": "👩🏻‍💻 Research Scientist Intern at Meta Reality Labs, Redmond, USA (May - Sep)"
+    },
+    {
+      "date": "May 2024",
+      "text": "👩🏻‍🏫 Paper presentation (MineXR) at CHI 2024"
+    },
+    {
+      "date": "May 2024",
+      "text": "✈️ Attending CHI 2024 in person @ Honolulu, Hawaii (May 10 - 17)"
+    },
+    {
+      "date": "Nov 2023",
+      "text": "🏆 BlendMR won the Best Paper Award at ACM ISS 2023!"
+    },
+    {
       "date": "Oct 2023",
       "text": "👩🏻‍🏫 Paper presentation (RealityReplay) at UbiComp 2023"
     },
