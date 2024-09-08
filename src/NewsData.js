@@ -4,6 +4,18 @@
 let newsData = {
   "news": [
     {
+      "date": "Oct 2024",
+      "text": "✈️ Attending ISMAR 2024 in person @ Greater Seattle Area, USA"
+    },
+    {
+      "date": "Oct 2024",
+      "text": "👩🏻‍🏫 Two paper presentations (Auptimize and SonoHaptics) at UIST 2024"
+    },
+    {
+      "date": "Oct 2024",
+      "text": "🏡 Attending UIST 2024 @ ✨Pittsburgh✨, USA"
+    },
+    {
       "date": "May 2024",
       "text": "👩🏻‍💻 Research Scientist Intern at Meta Reality Labs, Redmond, USA (May - Sep)"
     },

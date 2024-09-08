@@ -1,11 +1,53 @@
 let paperData = {
   "papers": [
     {
+      "title": "Push2AR: Enhancing Mobile List Interactions Using Augmented Reality",
+      "venue": "ISMAR 2024: IEEE International Symposium on Mixed and Augmented Reality",
+      "authors": "Jonathan Wieland, **Hyunsung Cho**, Sebastian Hubenschimid, Akihiro Kiuchi, Harald Reiterer, and David Lindlbauer",
+      "paper_link": null,
+      "pdf": null,
+      "award": null,
+      "award2": null,
+      "video": null,
+      "website": "https://augmented-perception.org/publications/2024-push2AR.html",
+      "acm_dl": null,
+      "slides": null,
+      "thumbnail": "/img/push2ar_thumbnail.png",
+    },
+    {
+      "title": "Auptimize: Optimal Placement of Spatial Audio Cues for Extended Reality",
+      "venue": "UIST 2024: ACM Symposium on User Interface Software and Technology",
+      "authors": "**Hyunsung Cho**, Alexander Wang, Divya Kartik, Emily Liying Xie, Yukang Yan, and David Lindlbauer",
+      "paper_link": "https://arxiv.org/abs/2408.09320",
+      "pdf": "https://arxiv.org/pdf/2408.09320",
+      "award": null,
+      "award2": null,
+      "video": null,
+      "website": "https://augmented-perception.org/publications/2024-auptimize.html",
+      "acm_dl": "https://dl.acm.org/doi/10.1145/3654777.3676424",
+      "slides": null,
+      "thumbnail": "/img/auptimize_thumbnail.png",
+    },
+    {
+      "title": "SonoHaptics: An Audio-Haptic Cursor for Gaze-Based Object Selection in XR",
+      "venue": "UIST 2024: ACM Symposium on User Interface Software and Technology",
+      "authors": "**Hyunsung Cho**, Naveen Sendhilnathan, Michael Nebeling, Tianyi Wang, Purnima Padmanabhan, Jonathan Browder, David Lindlbauer, Tanya R. Jonker, and Kashyap Todi",
+      "paper_link": "https://arxiv.org/abs/2409.00784",
+      "pdf": "https://arxiv.org/abs/2409.00784",
+      "award": null,
+      "award2": null,
+      "video": null,
+      "website": "https://augmented-perception.org/publications/2024-sonohaptics.html",
+      "acm_dl": "https://dl.acm.org/doi/10.1145/3654777.3676384",
+      "slides": null,
+      "thumbnail": "/img/sonohaptics_thumbnail.png",
+    },
+    {
       "title": "MineXR: Mining Personalized Extended Reality Interfaces",
-      "venue": "ACM CHI 2024",
+      "venue": "CHI 2024: ACM Conference on Human Factors in Computing Systems",
       "authors": "**Hyunsung Cho**, Yukang Yan, Kashyap Todi, Mark Parent, Missie Smith, Tanya Jonker, Hrvoje Benko, and David Lindlbauer",
-      "paper_link": "http://arxiv.org/abs/2403.08057",
-      "pdf": "https://arxiv.org/pdf/2403.08057.pdf",
+      "paper_link": "https://dl.acm.org/doi/10.1145/3613904.3642394",
+      "pdf": "https://dl.acm.org/doi/pdf/10.1145/3613904.3642394",
       "award": null,
       "award2": null,
       "video": "https://youtu.be/7K3eouLCcSw",
@@ -16,7 +58,7 @@ let paperData = {
     },
     {
       "title": "BlendMR: A Computational Method To Create Ambient Mixed Reality Interfaces",
-      "venue": "ACM ISS 2023",
+      "venue": "ISS 2023: ACM Interactive Surfaces and Spaces (ISS)",
       "authors": "Violet Han, **Hyunsung Cho**, Kiyosu Maeda, Alexandra Ion, and David Lindlbauer",
       "paper_link": "https://dl.acm.org/doi/abs/10.1145/3626472",
       "pdf": "https://dl.acm.org/doi/pdf/10.1145/3626472",
@@ -30,7 +72,7 @@ let paperData = {
     },
     {
       "title": "RealityReplay: Detecting and Replaying Temporal Changes In Situ using Mixed Reality",
-      "venue": "ACM IMWUT (UbiComp) 2023",
+      "venue": "IMWUT (UbiComp) 2023: Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",
       "authors": "**Hyunsung Cho**, Matthew Komar, and David Lindlbauer",
       "paper_link": "https://dl.acm.org/doi/10.1145/3610888",
       "pdf": "https://dl.acm.org/doi/pdf/10.1145/3610888",
@@ -44,7 +86,7 @@ let paperData = {
     },
     {
       "title": "FinerMe: Examining App-level and Feature-level Interventions to Regulate Mobile Social Media Use",
-      "venue": "ACM CSCW 2023",
+      "venue": "CSCW 2023: ACM Conference on Computer Supported Cooperative Work",
       "authors": "Adiba Orzikulova, **Hyunsung Cho**, Hye-Young Chung, Hwajung Hong, Uichin Lee, and Sung-Ju Lee",
       "paper_link": "https://dl.acm.org/doi/10.1145/3610065",
       "pdf": "https://dl.acm.org/doi/10.1145/3610065",
@@ -58,7 +100,7 @@ let paperData = {
     },
     {
       "title": "A Survey on Remote Assistance and Training in Mixed Reality Environments",
-      "venue": "IEEE TVCG: Transactions on Visualization and Computer Graphics 2023",
+      "venue": "TVCG 2023: IEEE Transactions on Visualization and Computer Graphics",
       "authors": "Catarina G. Fidalgo, Yukang Yan, **Hyunsung Cho**, Mauricio Sousa, David Lindlbauer, and Joaquim Jorge",
       "paper_link": "https://ieeexplore.ieee.org/abstract/document/10049704/",
       "pdf": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10049704",
@@ -72,7 +114,7 @@ let paperData = {
     },
     {
       "title": "FLAME: Federated Learning Across Multi-device Environments",
-      "venue": "ACM IMWUT (UbiComp) 2022",
+      "venue": "IMWUT (UbiComp) 2022: Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",
       "authors": "**Hyunsung Cho**, Akhil Mathur, and Fahim Kawsar",
       "paper_link": "https://dl.acm.org/doi/10.1145/3550289",
       "pdf": "https://dl.acm.org/doi/pdf/10.1145/3550289",
@@ -86,7 +128,7 @@ let paperData = {
     },
     {
       "title": "You Are Not Alone: How Trending Stress Topics Brought #Awareness and #Resonance on Campus",
-      "venue": "ACM CSCW 2022",
+      "venue": "CSCW 2022: ACM Conference on Computer Supported Cooperative Work",
       "authors": "Ryuhaerang Choi, Chanwoo Yoon, **Hyunsung Cho**, Hwajung Hong, Uichin Lee, and Sung-Ju Lee",
       "paper_link": "https://dl.acm.org/doi/abs/10.1145/3555612",
       "pdf": "https://dl.acm.org/doi/abs/10.1145/3555612",
@@ -101,7 +143,7 @@ let paperData = {
     {
       "title": "Prediction for Retrospection: Integrating Algorithmic Stress Prediction into Personal Informatics " +
           "\n\nSystems for College Students' Mental Health",
-      "venue": "ACM CHI 2022",
+      "venue": "CHI 2022: ACM Conference on Human Factors in Computing Systems",
       "authors": "Taewan Kim, Haesoo Kim, Ha Yeon Lee, Hwarang Goh, Shakhboz Abdigapporov, Mingon Jeong, " +
           "**Hyunsung Cho**, Kyungsik Han, Youngtae Noh, Sung-Ju Lee, and Hwajung Hong",
       "paper_link": "https://dl.acm.org/doi/abs/10.1145/3491102.3517701",
@@ -116,7 +158,7 @@ let paperData = {
     },
     {
       "title": "Reflect, not Regret: Understanding Regretful Smartphone Use with App Feature-Level Analysis",
-      "venue": "ACM CSCW 2021",
+      "venue": "CSCW 2021: ACM Conference on Computer Supported Cooperative Work",
       "authors": "**Hyunsung Cho**, DaEun Choi, Donghwi Kim, Wan Ju Kang, Eun Kyoung Choe, and Sung-Ju Lee",
       "paper_link": "https://dl.acm.org/doi/10.1145/3479600",
       "pdf": "/pdf/CSCW21_Finesse.pdf",
@@ -132,7 +174,7 @@ let paperData = {
     {
       "title": "I Share, You Care: Private Status Sharing and Sender-Controlled Notifications in " +
           "Mobile Instant Messaging",
-      "venue": "ACM CSCW 2020",
+      "venue": "CSCW 2020: ACM Conference on Computer Supported Cooperative Work",
       "authors": "**Hyunsung Cho**, Jinyoung Oh, Juho Kim, and Sung-Ju Lee",
       "paper_link": "https://dl.acm.org/doi/abs/10.1145/3392839",
       "pdf": "https://nmsl.kaist.ac.kr/pdf/CSCW20_MyButler.pdf",
@@ -145,7 +187,7 @@ let paperData = {
     },
     {
       "title": "Knocker:  Vibroacoustic-based Object Recognition with Smartphones",
-      "venue": "ACM IMWUT (UbiComp) 2019",
+      "venue": "IMWUT (UbiComp) 2019: Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",
       "authors": "Taesik Gong, **Hyunsung Cho**, Bowon Lee, and Sung-Ju Lee",
       "paper_link": "https://dl.acm.org/doi/abs/10.1145/3351240",
       "pdf": "https://nmsl.kaist.ac.kr/pdf/IMWUT19_Knocker.pdf",
