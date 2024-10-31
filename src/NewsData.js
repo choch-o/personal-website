@@ -4,8 +4,16 @@
 let newsData = {
   "news": [
     {
+      "date": "Nov 2024",
+      "text": "👩🏻‍🏫 Guest lecture for the Introduction to HCI course at the University of Rochester"
+    },
+    {
       "date": "Oct 2024",
-      "text": "✈️ Attending ISMAR 2024 in person @ Greater Seattle Area, USA"
+      "text": "🤝 Serving as Registration Co-chair for UIST 2025 in Busan, South Korea 🇰🇷"
+    },
+    {
+      "date": "Oct 2024",
+      "text": "👩🏻‍🏫 Research talk about Auptimize at CMU VASC Seminar"
     },
     {
       "date": "Oct 2024",
@@ -13,7 +21,7 @@ let newsData = {
     },
     {
       "date": "Oct 2024",
-      "text": "🏡 Attending UIST 2024 @ ✨Pittsburgh✨, USA"
+      "text": "🏡 Attending UIST 2024 in Pittsburgh, USA 🌉"
     },
     {
       "date": "May 2024",
@@ -25,7 +33,7 @@ let newsData = {
     },
     {
       "date": "May 2024",
-      "text": "✈️ Attending CHI 2024 in person @ Honolulu, Hawaii (May 10 - 17)"
+      "text": "✈️ Attending CHI 2024 in Honolulu, Hawaii (May 10 - 17)"
     },
     {
       "date": "Nov 2023",
@@ -37,7 +45,7 @@ let newsData = {
     },
     {
       "date": "Oct 2023",
-      "text": "✈️ UbiComp / ISWC 2023 @ Cancún, Mexico (Oct 8 - 13)"
+      "text": "✈️ Attending UbiComp 2023 in Cancún, Mexico (Oct 8 - 13)"
     },
     {
       "date": "Sep 2023",

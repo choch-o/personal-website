@@ -2,7 +2,7 @@ import { hot } from 'react-hot-loader/root';
 import React, { Component } from 'react';
 import { Anchor, Box, Button, Heading, Grommet, ResponsiveContext} from 'grommet';
 import { ResearchPage } from './ResearchPage';
-import { DesignProjectsPage } from "./DesignProjectsPage";
+import { PublicationsPage } from "./PublicationsPage";
 
 const theme = {
   global: {
@@ -95,6 +95,8 @@ const subheaderBarStyleMobile = {
   fontWeight: '200',
 }
 
+const cv = '/pdf/CV_HyunsungCho.pdf';
+
 const AppBar = (props) => (
   <Box
     tag='header'
@@ -174,30 +176,39 @@ class App extends Component {
                           : <span>Research</span>}
                     </Button>
                   </Heading>
+                  {/*<Heading level='5' style={(size === "small") ? subheaderBarStyleMobile : subheaderBarStyle}*/}
+                  {/*         color="brand" margin="small">*/}
+                  {/*  |*/}
+                  {/*</Heading>*/}
+                  {/*<Heading level='5' style={(size === "small") ? subheaderStyleMobile : subheaderStyle}*/}
+                  {/*  onClick={() => this.switchTab("publications")}*/}
+                  {/*         margin="none">*/}
+                  {/*  <Button hoverIndicator={{color: "brand", opacity: "strong"}}>*/}
+                  {/*  {(this.state.currentTab === "publications")*/}
+                  {/*      ? <span style={{'textDecoration': 'underline ',*/}
+                  {/*        'WebkitTextDecoration': 'underline',*/}
+                  {/*        'textDecorationColor': theme.global.colors.brand,*/}
+                  {/*        'WebkitTextDecorationColor': theme.global.colors.brand,}}>Publications</span>*/}
+                  {/*      : <span>Publications</span>}*/}
+                  {/*  </Button>*/}
+                  {/*</Heading>*/}
                   <Heading level='5' style={(size === "small") ? subheaderBarStyleMobile : subheaderBarStyle}
                            color="brand" margin="small">
                     |
                   </Heading>
                   <Heading level='5' style={(size === "small") ? subheaderStyleMobile : subheaderStyle}
-                           // onClick={() => this.switchTab("diy_projects")}
                            margin="none">
-                    {/*<Button hoverIndicator={{color: "brand", opacity: "strong"}}>*/}
-                      <Anchor href="https://hyunsungcho.cargo.site/" label="DIY Projects" target="_blank"
-                              style={{fontWeight: '200', color: 'black'}}
-                      />
-                      {/*{(this.state.currentTab === "research")*/}
-                      {/*    ? <span>DIY Projects</span>*/}
-                      {/*    : <span style={{'textDecoration': 'underline ',*/}
-                      {/*      'WebkitTextDecoration': 'underline',*/}
-                      {/*      'textDecorationColor': theme.global.colors.brand,*/}
-                      {/*      'WebkitTextDecorationColor': theme.global.colors.brand,}}>DIY Projects</span>}*/}
-                    {/*</Button>*/}
+                    <Button hoverIndicator={{color: "brand", opacity: "strong"}}>
+                    <Anchor href={cv} label="CV" target="_blank"
+                            style={{fontWeight: '200', color: 'black'}}
+                    />
+                    </Button>
                   </Heading>
                 </Box>
               </AppBar>
               {this.state.currentTab === "research" ?
                   <ResearchPage theme={theme} />
-                  : <DesignProjectsPage />
+                  : <PublicationsPage />
               }
             </Box>
           )}

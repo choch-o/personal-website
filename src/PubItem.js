@@ -1,5 +1,5 @@
 import {Box, Button, Image, Markdown, Text, ThemeContext} from "grommet";
-import {Code, Desktop, DocumentPdf, Home, Star, Trophy, Video} from "grommet-icons";
+import {Code, Desktop, DocumentPdf, Home, Notes, Star, Trophy, Video} from "grommet-icons";
 import React from "react";
 
 /* Styles */
@@ -124,12 +124,25 @@ const PubItem = (props) => (
                             <div>
                                 <Button
                                     icon={<Desktop size="small"/>}
-                                    label={<Text size="small">Slides</Text>}
+                                    label={<Text size="small">Presentation</Text>}
                                     href={props.slides}
                                     a11yTitle="slides"
                                     margin={{
                                         "top": "xsmall",
                                         "right": "xsmall",}}
+                                />
+                            </div>
+                            }
+                            {props.poster != null &&
+                            <div>
+                                <Button
+                                  icon={<Notes size="small"/>}
+                                  label={<Text size="small">Poster</Text>}
+                                  href={props.poster}
+                                  a11yTitle="PDF"
+                                  margin={{
+                                      "top": "xsmall",
+                                      "right": "xsmall",}}
                                 />
                             </div>
                             }
