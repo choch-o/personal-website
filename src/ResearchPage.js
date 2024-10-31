@@ -9,12 +9,12 @@ import {Footer} from "./Footer"
 // import fontawesome from '@fortawesome/fontawesome'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from "@fortawesome/fontawesome-svg-core"
-import { faFile, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faFile, faEnvelope, faVolumeHigh, faPlay } from '@fortawesome/free-solid-svg-icons'
 import { faGoogleScholar, faXTwitter } from '@fortawesome/free-brands-svg-icons'
 
 const profile = '/img/profile_xmas.JPG';
 
-library.add(faFile, faEnvelope, faGoogleScholar, faXTwitter);
+library.add(faFile, faEnvelope, faGoogleScholar, faXTwitter, faVolumeHigh, faPlay);
 
 const isLatestNews = (dateStr) => {
     /* Incompatible in Safari */
@@ -72,10 +72,10 @@ class ResearchPage extends Component {
                                         src={profile}
                                     />
                                     <Box margin="xsmall" direction="column" gap="xsmall">
-                                    {/*<Button plain alignSelf="start" icon={<FontAwesomeIcon icon="fa-solid fa-file" />} label="CV" target="_blank" href={cv} />*/}
-                                    <Button plain alignSelf="start" icon={<FontAwesomeIcon icon="fa-solid fa-envelope" />} label="hyunsung [at] cs.cmu.edu" target="_blank" href="mailto:hyunsung@cs.cmu.edu" />
-                                    <Button plain alignSelf="start" icon={<FontAwesomeIcon icon="fa-brands fa-google-scholar" style={{color: "#74C0FC",}} />} label="Google Scholars" target="_blank" href="https://scholar.google.co.kr/citations?user=VpQp9hEAAAAJ"/>
-                                    <Button plain alignSelf="start" icon={<FontAwesomeIcon icon="fa-brands fa-x-twitter" />} label="Twitter | X" target="_blank" href="https://twitter.com/hciresearcher"/>
+                                        <Button plain alignSelf="start" icon={<FontAwesomeIcon icon="fa-solid fa-envelope" />} label="hyunsung [at] cs.cmu.edu" target="_blank" href="mailto:hyunsung@cs.cmu.edu" />
+                                        <Button plain alignSelf="start" icon={<FontAwesomeIcon icon="fa-brands fa-google-scholar" style={{color: "#74C0FC",}} />} label="Google Scholars" target="_blank" href="https://scholar.google.co.kr/citations?user=VpQp9hEAAAAJ"/>
+                                        <Button plain alignSelf="start" icon={<FontAwesomeIcon icon="fa-brands fa-x-twitter" />} label="Twitter | X" target="_blank" href="https://twitter.com/hciresearcher"/>
+                                        <Button plain alignSelf="start" icon={<FontAwesomeIcon icon="fa-solid fa-volume-high" />} label="How to pronounce my name" target="_blank" href="https://x.com/hciresearcher/status/1572391049317830656" />
                                     </Box>
                                     {/*<Text size="small">* Hyunsung is pronounced as [hjʌn sʌŋ].</Text>*/}
                                     {/*<Text size="small" alignSelf="center">Hyunsung is pronounced hjʌn sʌŋ.</Text>*/}
