@@ -92,7 +92,7 @@ class ResearchPage extends Component {
                                                                                        style={this.anchorStyle}
                                     />, advised by Prof. <Anchor color='black' href="https://davidlindlbauer.com"
                                                                  label="David Lindlbauer" style={this.anchorStyle}/>.
-                                        I explore how to <b>enhance users' capabilities</b> with <b>minimal effort and distraction</b> through <b>context-aware digital support</b>.
+                                        I explore ways to enhance users' capabilities with minimal effort and distraction through <b>context-aware digital support</b>.
                                         {/*She is interested in building context-aware computing systems that enable seamless, unobtrusive interactions with digital functionalities.*/}
 
                                         {/*My research interest lies in Human-Computer Interaction (HCI) and ubiquitous computing.*/}
@@ -105,16 +105,15 @@ class ResearchPage extends Component {
                                         {/*inferred from mobile sensing and user interaction data.*/}
                                     </Paragraph>
                                     <Paragraph margin="small" size="small" fill={true} color="black">
-                                        My current research focuses on two main areas: (1) building <b>dynamic Extended Reality (XR) interfaces</b> that <b>adapt to varying user contexts and needs</b>, and (2) advancing <b>multimodal interaction techniques</b> in XR to facilitate <b>natural, effortless engagement without demanding users' full attention</b>.
-                                        My work combines <b>computational modeling</b> of human perception and behavior, <b>user-centered</b> design, and <b>intelligent</b> interactive systems to design adaptive interfaces and interaction techniques.
-                                        I aim to create <b>technology that feels invisible</b>, allowing users to <b>focus on what matters most</b> in their environment while <b>easily accessing digital support</b> when needed.
+                                        My current research advances <b>everyday Extended Reality (XR)</b> in two key directions: (1) developing <b>context-aware, personalized XR interfaces</b> that dynamically adapt to users' changing environments, activities, and goals, and (2) designing <b>multimodal</b> interaction techniques that integrate natural inputs such as gaze, voice, and gesture with rich outputs across visual, auditory, and haptic channels.
+                                        By combining <b>computational modeling</b> of human perception and behavior, <b>user-centered</b> design, and <b>adaptive</b> systems,  I aim to create XR technologies that blend seamlessly into users' lives, making the technology feel <Anchor color='black' href="https://dl.acm.org/doi/10.1145/329124.329126" label='"invisible"' style={this.subtleAnchorStyle}/>.
+                                        This allows users to focus on what matters most in their environment while accessing digital support effortlessly when needed.
                                     </Paragraph>
                                     <Paragraph margin="small" size="small" fill={true} color="black">
 
                                         In Summer 2023 and 2024, I worked as a Research Scientist Intern at <Anchor color='black' href="https://about.meta.com/realitylabs/"
                                                 label="Meta Reality Labs" style={this.subtleAnchorStyle}/>
-                                        , Redmond, USA, with Dr. <Anchor color='black' href="https://www.kashyaptodi.com/"
-                                                                                                                                                                        label="Kash Todi" style={this.subtleAnchorStyle}/>.
+                                        , Redmond, USA, with Dr. <Anchor color='black' href="https://www.kashyaptodi.com/" label="Kash Todi" style={this.subtleAnchorStyle}/>.
                                         Prior to joining CMU, I was a member
                                         of the <Anchor color="black" href="https://nmsl.kaist.ac.kr"
                                                    label="Networking & Mobile Systems Lab"

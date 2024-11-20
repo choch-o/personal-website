@@ -5,7 +5,11 @@ let newsData = {
   "news": [
     {
       "date": "Nov 2024",
-      "text": "👩🏻‍🏫 Guest lecture for the Introduction to HCI course at the University of Rochester"
+      "text": "👩🏻‍🏫 Guest lecture in *Introduction to AR/VR Application Design* at University of Michigan"
+    },
+    {
+      "date": "Nov 2024",
+      "text": "👩🏻‍🏫 Guest lecture in *Introduction to Human-Computer Interaction* at University of Rochester"
     },
     {
       "date": "Oct 2024",
